@@ -1,0 +1,1046 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5153119-2377-4109-BC19-497F0252EDD2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GAME</RootNamespace>
+    <AssemblyName>GAME</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>G:\BUNIFU_DEMO\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="templateForm">
+      <HintPath>C:\Users\linh9\source\repos\templateForm\templateForm\bin\Debug\templateForm.exe</HintPath>
+    </Reference>
+    <Reference Include="WindowsFormsControlLibrary1">
+      <HintPath>..\..\tmpForm\WindowsFormsControlLibrary1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Level1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level1.Designer.cs">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level2.Designer.cs">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RootForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RootForm.Designer.cs">
+      <DependentUpon>RootForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemControl.Designer.cs">
+      <DependentUpon>SystemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Level1.resx">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level2.resx">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RootForm.resx">
+      <DependentUpon>RootForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemControl.resx">
+      <DependentUpon>SystemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-button-with-plus-symbol-in-a-black-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-curve-pointing-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-curving-around-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-down-sign-to-navigate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-fork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-from.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowheads-of-thin-outline-to-the-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowhead-thin-outline-to-the-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-into-drive-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-in-u-shape-to-turn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-join.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-junction-one-to-the-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-loop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-loop-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-loop-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-merge-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-navigate-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-of-large-size-turning-to-the-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-over-a-rectangular-element.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-pointing-down-right-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-pointing-right-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-pointing-to-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-pointing-up-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-point-to-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-point-to-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows-group-interface-symbol-to-expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-shuffle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows-merge-pointing-to-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows-mix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-spread-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-squiggly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-through.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-to.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-to-the-left-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-to-the-right-navigation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-up-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-up-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-upward-to-rectangle-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-navigational-arrow-button-pointing-to-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrier-closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrier-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basic-text-format.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basic-window-appearance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell-black-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biohazard-sign-inside-a-triangle-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank-window-with-key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-closed-with-black-cover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmarks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark-silhouette-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-of-black-cover-closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-open-in-the-middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books-overlapping-arrangement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-with-headphones-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-with-white-bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\braille-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broken-heart-silhouette-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calibration-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candle-burning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candle-holder-with-candle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd-burning-application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd-case.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd-drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd-pirated-interface-symbol-for-piracy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd-with-open-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkered-racing-flag-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-mark-black-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-outline-with-exclamation-point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-empty-in-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-paste-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-paste-with-no-format.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-variant-with-lists-and-checks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-variant-with-pencil-and-check-mark-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closed-door-with-border-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compact-disc-variant-with-border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy-documents-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crosshair-variant-with-navigation-arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-variant-with-arrow-edges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curved-arrow-to-the-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-symbol-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dictionary-book-with-letters-a-to-z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-centering-horizontally.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-empty-horizontal-page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-file-with-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-footer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-height-adjustment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-landscape-orientation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-page-number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-pinned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents-empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents-exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-size.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents-with-a-heart-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-tag-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-vertical-center-alignment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-width.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-with-a-cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-with-gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-with-irregular-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-with-line-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-with-paper-clip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-with-selection-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-with-speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double-curve-arrow-to-the-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equalizer-tool-on-open-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escalator-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escalator-silhouette-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escalator-up-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-again-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-and-replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first-aid-cross-in-black-inside-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fit-to-height.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fit-to-width.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag-signal-in-black-cloth-on-a-pole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk-digital-data-storage-or-save-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-diskette-with-open-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-diskette-with-pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disks-pair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-and-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-into.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-network-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-out-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-shared.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders-of-large-size-arranged.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders-with-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-with-a-document-page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-with-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-with-label-of-large-size.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-zip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-style-bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-style-subscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-style-superscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-style-underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\four-arrows-meeting-at-the-center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage-can.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage-can-half-full-with-recycle-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage-can-with-recycling-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage-container.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage-full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage-with-recycle-sign-overflowing-with-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hard-drive-computer-part.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hard-drive-network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart-simple-shape-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indent-decrease-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indent-increase-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italics-font-style-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justified-text-alignment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-with-cross-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\led-light-lamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter-n-lower-case-font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letters-abc-in-pixelated-form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lifebelt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-bulb-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightbulb-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lighthouse-with-flashing-lights.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-break-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-spacing-adjustment-in-a-paragraph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-spacing-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-in-bullet-form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-roman-style-numbers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locator-on-an-open-folded-map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magazine-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic-wand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-lens-with-plus-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male-gender-symbol-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-of-roads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-route.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize-size-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft-word-document-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-sign-of-a-line-in-horizontal-position.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music-cd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music-document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-arrow-button-to-beginning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-arrows-pointing-to-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-to-end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-up-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-up-arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigational-arrow-pointing-down-left-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigation-arrow-down-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigation-history-interface-symbol-of-a-clock-with-an-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigation-up-arrow-to-the-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numbered-list-style.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-door-with-border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-folder-black-and-white-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-folder-with-document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-scroll-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-window-with-gear-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-window-with-height-adjustment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-window-with-star-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-window-with-timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-symbol-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portfolio-folder-with-button-lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-of-network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-with-document-coming-out-of-machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-mark-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quotation-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quotation-marks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quotation-right-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\radiation-warning-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle-symbol-made-of-arrows-with-selection-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo-navigational-arrow-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-arrows-couple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-navigational-arrows-interface-symbol-inside-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-selection-arrows-couple-inside-a-square-of-broken-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize-arrow-inside-a-square-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-text-alignment-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-thin-arrowheads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\route-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll-variant-with-seal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection-find-interface-symbol-of-binoculars-with-eyes-in-a-square-of-broken-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection-symbol-for-interface-of-a-square-of-broken-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection-view-interface-symbol-of-a-magnifying-glass-inside-a-broken-line-square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service-bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ships-wheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signaling-disc-tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signpost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signpost-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signpost-with-three-arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speech-balloon-outline-for-conversation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speech-balloon-outline-with-exclamation-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speech-balloon-outline-with-question-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spell-check-interface-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\split-type-window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square-root-of-x-math-formula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssd-drive-part.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairs-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairs-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-in-black-of-five-points-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-sign-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strikethrough-font-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sum-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tags-black-couple-with-rings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-align-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-alignment-at-the-center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toxic-warning-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traffic-light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trafficlight-in-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traffic-light-in-red-signal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trafficlight-in-yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trafficlight-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traffic-light-silhouette-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangular-warning-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triple-arrow-merging-to-one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo-navigational-arrow-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-right-arrow-in-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-flammable-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-harmful-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-voltage-sign-of-a-bolt-inside-a-triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-window-with-exclamation-sign-inside-a-triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-networking-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-of-dialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-of-test-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-couple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-size.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-split-vertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-width.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-with-earth-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window-with-side-bar-selection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yield-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zip-file-document-variant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-out-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_Cutted.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
