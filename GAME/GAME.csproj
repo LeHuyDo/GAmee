@@ -36,6 +36,9 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>G:\BUNIFU_DEMO\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Control.Draggable, Version=1.0.5049.269, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -59,17 +62,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContinueSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContinueSelection.Designer.cs">
+      <DependentUpon>ContinueSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameLogic.cs" />
+    <Compile Include="HallOfFame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HallOfFame.Designer.cs">
+      <DependentUpon>HallOfFame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="heartBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="heartBar.Designer.cs">
+      <DependentUpon>heartBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPrefabLevel.cs" />
     <Compile Include="Level1.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Level1.Designer.cs">
       <DependentUpon>Level1.cs</DependentUpon>
     </Compile>
     <Compile Include="Level2.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Level2.Designer.cs">
       <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Level3.Designer.cs">
+      <DependentUpon>Level3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Level4.Designer.cs">
+      <DependentUpon>Level4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LevelsManagement.cs" />
+    <Compile Include="LevelsMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LevelsMenu.Designer.cs">
+      <DependentUpon>LevelsMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>UserControl</SubType>
@@ -77,34 +119,54 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyExtensionMethodForm.cs" />
+    <Compile Include="PrefabLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrefabLevel.Designer.cs">
+      <DependentUpon>PrefabLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="RootForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RootForm.Designer.cs">
       <DependentUpon>RootForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SystemControl.Designer.cs">
-      <DependentUpon>SystemControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ContinueSelection.resx">
+      <DependentUpon>ContinueSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HallOfFame.resx">
+      <DependentUpon>HallOfFame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="heartBar.resx">
+      <DependentUpon>heartBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Level2.resx">
       <DependentUpon>Level2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Level3.resx">
+      <DependentUpon>Level3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level4.resx">
+      <DependentUpon>Level4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelsMenu.resx">
+      <DependentUpon>LevelsMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrefabLevel.resx">
+      <DependentUpon>PrefabLevel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SystemControl.resx">
-      <DependentUpon>SystemControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1041,6 +1103,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Background_Cutted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bNorth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bSouth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bEast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elevator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffinguys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redRibbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
