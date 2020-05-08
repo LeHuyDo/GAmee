@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GAME
 {
-    public partial class Level1 : UserControl
+    public partial class Level1 : PrefabLevel
     {
         public Level1()
         {
@@ -63,26 +63,13 @@ namespace GAME
             {
                 if (btn_CaRot.Visible == true)
                 {
-                    Passed?.Invoke(this, e);
+                    RightAnswer(EventArgs.Empty);
                 }
                 else
                 {
-                    Missed?.Invoke(this, e);
+                    WrongAnswer(EventArgs.Empty);
                 }
             }
         }
-
-        #region Thêm một số HandleEvent
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Passed")]
-        public event EventHandler Passed;
-
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Missed")]
-        public event EventHandler Missed;
-
-        #endregion
     }
 }

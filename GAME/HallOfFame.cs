@@ -35,7 +35,7 @@ namespace GAME
 
         private void btn_NextLevel_Click(object sender, EventArgs e)
         {
-            PlayAgain?.Invoke(sender, e);
+            NextLevel?.Invoke(sender, e);
         }
 
         [Browsable(true)]
@@ -45,7 +45,7 @@ namespace GAME
 
         private void btn_LevelMenuOpen_Click(object sender, EventArgs e)
         {
-            LevelMenuOpen?.Invoke(sender, e);
+            PlayAgain?.Invoke(sender, e);
         }
 
         [Browsable(true)]
@@ -55,7 +55,7 @@ namespace GAME
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            NextLevel?.Invoke(sender, e);
+            LevelMenuOpen?.Invoke(sender, e);
         }
         #endregion
     }

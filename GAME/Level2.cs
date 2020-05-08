@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace GAME
 {
-    public partial class Level2 : UserControl
+    public partial class Level2 : PrefabLevel
     {
+        bool isGreenPencilShow = false;
+
         public Level2()
         {
             InitializeComponent();
@@ -28,16 +30,21 @@ namespace GAME
         {
             Point centerRedPencil = GameLogic.CenterOfControl(picture_RedPencil.Location, picture_RedPencil.Size);
 
-            if (GameLogic.IsInArea(centerRedPencil, picture_BluePencil.Location, picture_BluePencil.Size))
+            if (isGreenPencilShow)
+            {
+                RightAnswer(EventArgs.Empty);
+            }
+            else if (GameLogic.IsInArea(centerRedPencil, picture_BluePencil.Location, picture_BluePencil.Size))
             {
                 picture_RedPencil.Hide();
                 picture_BluePencil.Image = Properties.Resources.object_111;
 
-                //  Right answer
+                isGreenPencilShow = true;
+                ControlExtension.Draggable(picture_BluePencil, false);
             }
             else
             {
-                //  Wrong answer
+                WrongAnswer(EventArgs.Empty);
             }
         }
 
@@ -45,37 +52,32 @@ namespace GAME
         {
             Point centerBluePencil = GameLogic.CenterOfControl(picture_BluePencil.Location, picture_RedPencil.Size);
 
-            if (GameLogic.IsInArea(centerBluePencil, picture_RedPencil.Location, picture_RedPencil.Size))
+            if (isGreenPencilShow)
+            {
+                RightAnswer(EventArgs.Empty);
+            }
+            else if (GameLogic.IsInArea(centerBluePencil, picture_RedPencil.Location, picture_RedPencil.Size))
             {
                 picture_BluePencil.Hide();
                 picture_RedPencil.Image = Properties.Resources.object_111;
 
-                //  Right answer
-                Passed?.Invoke(this, e);
+                isGreenPencilShow = true;
+                ControlExtension.Draggable(picture_RedPencil, false);
             }
             else
             {
-                //  Wrong answer
-                Missed?.Invoke(this, e);
+                WrongAnswer(EventArgs.Empty);
             }
         }
 
         private void picture_YellowPencil_MouseUp(object sender, MouseEventArgs e)
         {
-            //  Wrong answer
+            WrongAnswer(EventArgs.Empty);
         }
 
-        #region Thêm một số HandleEvent
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Passed")]
-        public event EventHandler Passed;
-
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Missed")]
-        public event EventHandler Missed;
-
-        #endregion
+        private void Level2_MouseUp(object sender, MouseEventArgs e)
+        {
+            WrongAnswer(EventArgs.Empty);
+        }
     }
 }

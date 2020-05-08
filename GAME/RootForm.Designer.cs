@@ -44,6 +44,8 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.continueSelection = new GAME.ContinueSelection();
+            this.heartBar = new GAME.HeartBar();
             this.hallOfFame = new GAME.HallOfFame();
             this.mainMenu = new GAME.MainMenu();
             this.levelsMenu = new GAME.LevelsMenu();
@@ -285,6 +287,18 @@
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // continueSelection
+            // 
+            this.continueSelection.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.continueSelection, "continueSelection");
+            this.continueSelection.Name = "continueSelection";
+            // 
+            // heartBar
+            // 
+            this.heartBar.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.heartBar, "heartBar");
+            this.heartBar.Name = "heartBar";
+            // 
             // hallOfFame
             // 
             this.hallOfFame.BackColor = System.Drawing.Color.DimGray;
@@ -309,18 +323,18 @@
             this.levelsMenu.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.levelsMenu, "levelsMenu");
             this.levelsMenu.Name = "levelsMenu";
-            this.levelsMenu.Level1_ButtonClick += new System.EventHandler(this.levelsMenu_Level1_ButtonClick);
-            this.levelsMenu.Level2_ButtonClick += new System.EventHandler(this.levelsMenu_Level2_ButtonClick);
-            this.levelsMenu.Level3_ButtonClick += new System.EventHandler(this.levelsMenu_Level3_ButtonClick);
+            this.levelsMenu.Level_ButtonClick += new System.EventHandler(this.levelsMenu_Level_ButtonClick);
             // 
             // RootForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+            this.Controls.Add(this.menuPanel);
+            this.Controls.Add(this.continueSelection);
+            this.Controls.Add(this.heartBar);
             this.Controls.Add(this.hallOfFame);
             this.Controls.Add(this.mainMenu);
-            this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.toolBar);
             this.Controls.Add(this.levelsMenu);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -354,6 +368,8 @@
         private LevelsMenu levelsMenu;
         private Bunifu.Framework.UI.BunifuImageButton btn_Menu;
         private HallOfFame hallOfFame;
+        private HeartBar heartBar;
+        private ContinueSelection continueSelection;
     }
 }
 

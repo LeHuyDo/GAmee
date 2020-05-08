@@ -76,7 +76,7 @@
             this.btn_Level1.Name = "btn_Level1";
             this.btn_Level1.Size = new System.Drawing.Size(175, 175);
             this.btn_Level1.TabIndex = 0;
-            this.btn_Level1.Click += new System.EventHandler(this.btn_Level1_Click);
+            this.btn_Level1.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // btn_Level4
             // 
@@ -96,6 +96,7 @@
             this.btn_Level4.Name = "btn_Level4";
             this.btn_Level4.Size = new System.Drawing.Size(175, 175);
             this.btn_Level4.TabIndex = 0;
+            this.btn_Level4.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // btn_Level7
             // 
@@ -115,6 +116,7 @@
             this.btn_Level7.Name = "btn_Level7";
             this.btn_Level7.Size = new System.Drawing.Size(175, 175);
             this.btn_Level7.TabIndex = 0;
+            this.btn_Level7.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // bunifuTileButton10
             // 
@@ -134,6 +136,7 @@
             this.bunifuTileButton10.Name = "bunifuTileButton10";
             this.bunifuTileButton10.Size = new System.Drawing.Size(175, 175);
             this.bunifuTileButton10.TabIndex = 0;
+            this.bunifuTileButton10.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // btn_Level2
             // 
@@ -153,7 +156,7 @@
             this.btn_Level2.Name = "btn_Level2";
             this.btn_Level2.Size = new System.Drawing.Size(175, 175);
             this.btn_Level2.TabIndex = 0;
-            this.btn_Level2.Click += new System.EventHandler(this.btn_Level2_Click);
+            this.btn_Level2.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // btn_Level5
             // 
@@ -173,6 +176,7 @@
             this.btn_Level5.Name = "btn_Level5";
             this.btn_Level5.Size = new System.Drawing.Size(175, 175);
             this.btn_Level5.TabIndex = 0;
+            this.btn_Level5.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // btn_Level8
             // 
@@ -192,6 +196,7 @@
             this.btn_Level8.Name = "btn_Level8";
             this.btn_Level8.Size = new System.Drawing.Size(175, 175);
             this.btn_Level8.TabIndex = 0;
+            this.btn_Level8.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // bunifuTileButton11
             // 
@@ -211,6 +216,7 @@
             this.bunifuTileButton11.Name = "bunifuTileButton11";
             this.bunifuTileButton11.Size = new System.Drawing.Size(175, 175);
             this.bunifuTileButton11.TabIndex = 0;
+            this.bunifuTileButton11.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // btn_Level3
             // 
@@ -230,7 +236,7 @@
             this.btn_Level3.Name = "btn_Level3";
             this.btn_Level3.Size = new System.Drawing.Size(175, 175);
             this.btn_Level3.TabIndex = 0;
-            this.btn_Level3.Click += new System.EventHandler(this.btn_Level3_Click);
+            this.btn_Level3.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // btn_Level6
             // 
@@ -250,6 +256,7 @@
             this.btn_Level6.Name = "btn_Level6";
             this.btn_Level6.Size = new System.Drawing.Size(175, 175);
             this.btn_Level6.TabIndex = 0;
+            this.btn_Level6.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // bunifuTileButton9
             // 
@@ -269,6 +276,7 @@
             this.bunifuTileButton9.Name = "bunifuTileButton9";
             this.bunifuTileButton9.Size = new System.Drawing.Size(175, 175);
             this.bunifuTileButton9.TabIndex = 0;
+            this.bunifuTileButton9.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // endPanel
             // 
@@ -498,6 +506,7 @@
             this.bunifuTileButton12.Name = "bunifuTileButton12";
             this.bunifuTileButton12.Size = new System.Drawing.Size(175, 175);
             this.bunifuTileButton12.TabIndex = 0;
+            this.bunifuTileButton12.Click += new System.EventHandler(this.btn_Level_Click);
             // 
             // LevelsMenu
             // 

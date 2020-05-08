@@ -44,7 +44,7 @@
             this.label_Level1.BackColor = System.Drawing.Color.Transparent;
             this.label_Level1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Level1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label_Level1.Location = new System.Drawing.Point(89, 118);
+            this.label_Level1.Location = new System.Drawing.Point(91, 122);
             this.label_Level1.Name = "label_Level1";
             this.label_Level1.Size = new System.Drawing.Size(537, 93);
             this.label_Level1.TabIndex = 1;
@@ -56,7 +56,7 @@
             this.btn_QuaTao.BackColor = System.Drawing.Color.Transparent;
             this.btn_QuaTao.Image = global::GAME.Properties.Resources.object_5;
             this.btn_QuaTao.ImageActive = null;
-            this.btn_QuaTao.Location = new System.Drawing.Point(501, 607);
+            this.btn_QuaTao.Location = new System.Drawing.Point(501, 616);
             this.btn_QuaTao.Name = "btn_QuaTao";
             this.btn_QuaTao.Size = new System.Drawing.Size(88, 107);
             this.btn_QuaTao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -118,7 +118,6 @@
             this.Controls.Add(this.btn_Xo);
             this.Font = new System.Drawing.Font("Lunchtime Doubly So", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Level1";
-            this.Size = new System.Drawing.Size(702, 880);
             this.Load += new System.EventHandler(this.Level1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_QuaTao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CaRot)).EndInit();

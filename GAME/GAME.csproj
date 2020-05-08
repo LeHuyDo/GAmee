@@ -75,11 +75,11 @@
     <Compile Include="HallOfFame.Designer.cs">
       <DependentUpon>HallOfFame.cs</DependentUpon>
     </Compile>
-    <Compile Include="heartBar.cs">
+    <Compile Include="HeartBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="heartBar.Designer.cs">
-      <DependentUpon>heartBar.cs</DependentUpon>
+    <Compile Include="HeartBar.Designer.cs">
+      <DependentUpon>HeartBar.cs</DependentUpon>
     </Compile>
     <Compile Include="IPrefabLevel.cs" />
     <Compile Include="Level1.cs">
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="HallOfFame.resx">
       <DependentUpon>HallOfFame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="heartBar.resx">
-      <DependentUpon>heartBar.cs</DependentUpon>
+    <EmbeddedResource Include="HeartBar.resx">
+      <DependentUpon>HeartBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
@@ -1181,6 +1181,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heartDeath.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

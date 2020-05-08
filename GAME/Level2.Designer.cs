@@ -95,8 +95,8 @@
             this.Controls.Add(this.picture_RedPencil);
             this.Controls.Add(this.picture_BluePencil);
             this.Name = "Level2";
-            this.Size = new System.Drawing.Size(702, 880);
             this.Load += new System.EventHandler(this.Level2_Load);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Level2_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.picture_YellowPencil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_RedPencil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_BluePencil)).EndInit();

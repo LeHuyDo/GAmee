@@ -10,36 +10,26 @@ using System.Windows.Forms;
 
 namespace GAME
 {
-    public partial class Level3 : UserControl
+    public partial class Level3 : PrefabLevel
     {
         public Level3()
         {
             InitializeComponent();
         }
 
-        private void WrongAnserEvent(object sender, EventArgs e)
+        private void WrongAnserHandle(object sender, EventArgs e)
         {
-            //  Wrong answer
-            Missed?.Invoke(this, e);
+            WrongAnswer(EventArgs.Empty);
+        }
+
+        private void Level3_KeyUp(object sender, KeyEventArgs e)
+        {
+            WrongAnswer(EventArgs.Empty);
         }
 
         private void btn_West_Click(object sender, EventArgs e)
         {
-            //  Right answer
-            Passed?.Invoke(this, e);
+            RightAnswer(EventArgs.Empty);
         }
-
-        #region Thêm một số HandleEvent
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Passed")]
-        public event EventHandler Passed;
-
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Missed")]
-        public event EventHandler Missed;
-
-        #endregion
     }
 }

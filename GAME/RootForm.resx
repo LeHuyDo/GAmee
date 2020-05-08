@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_Menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 0</value>
+    <value>0, 0</value>
   </data>
   <data name="btn_Menu.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 45</value>
@@ -324,7 +324,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toolBar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="menuTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>35, 32</value>
@@ -777,10 +777,52 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="continueSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 476</value>
+  </data>
+  <data name="continueSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>497, 571</value>
+  </data>
+  <data name="continueSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;continueSelection.Name" xml:space="preserve">
+    <value>continueSelection</value>
+  </data>
+  <data name="&gt;&gt;continueSelection.Type" xml:space="preserve">
+    <value>GAME.ContinueSelection, GAME, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;continueSelection.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;continueSelection.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="heartBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 61</value>
+  </data>
+  <data name="heartBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 32</value>
+  </data>
+  <data name="heartBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;heartBar.Name" xml:space="preserve">
+    <value>heartBar</value>
+  </data>
+  <data name="&gt;&gt;heartBar.Type" xml:space="preserve">
+    <value>GAME.HeartBar, GAME, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;heartBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;heartBar.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="hallOfFame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 167</value>
+    <value>102, 181</value>
   </data>
   <data name="hallOfFame.Size" type="System.Drawing.Size, System.Drawing">
     <value>497, 571</value>
@@ -798,7 +840,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;hallOfFame.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="mainMenu.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
@@ -822,7 +864,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mainMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="levelsMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 131</value>
@@ -843,7 +885,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;levelsMenu.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -856,9 +898,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>702, 880</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

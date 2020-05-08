@@ -12,10 +12,14 @@ namespace GAME
 {
     public partial class RootForm : Form
     {
-        private int heart = 5;
+        private PrefabLevel currentLevel;
+
+        private int numberOfLife = 5;
 
         private bool isMenuShow = false;
         private int currentLevelNumber = 1;
+
+        ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
 
         public RootForm()
         {
@@ -30,6 +34,8 @@ namespace GAME
             ToolbarClose();
             LevelsMenu_Close();
             HallOfFame_Close();
+            HeartBar_Close();
+            ContinueSelection_Close();
         }
 
         #region Quản lý Toolbar
@@ -118,94 +124,78 @@ namespace GAME
         #endregion
 
         #region Màn chơi
-        //  Màn 1
-        private void levelsMenu_Level1_ButtonClick(object sender, EventArgs e)
-        {
-            LevelsMenu_Close();
-
-            Level1 level1 = new Level1();
-
-            level1.BackColor = System.Drawing.Color.Transparent;
-
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
-            resources.ApplyResources(level1, "level1");
-            level1.Name = "level1";
-            Controls.Add(level1);
-
-            level1.Passed += new EventHandler(Level1_Passed);
-            level1.Missed += new EventHandler(Level1_Missed);
-        }
-
-        private void Level1_Passed(object sender, EventArgs e)
+        private void RightAnswer(object sender, EventArgs e)
         {
             hallOfFame.SetLevelLabel(currentLevelNumber);
             hallOfFame.Show();
         }
 
-        private void Level1_Missed(object sender, EventArgs e)
+        private void WrongAnswer(object sender, EventArgs e)
         {
-            heart--;
-            hallOfFame.Show();
+            numberOfLife--;
+            heartBar.SetHearts(numberOfLife);
+
+            Controls.Remove(currentLevel);
+            level_Selection();
+
+            if (numberOfLife <= 0)
+            {
+                ContinueSelection_Open();
+            }
         }
 
-        //  Màn 2
-        private void levelsMenu_Level2_ButtonClick(object sender, EventArgs e)
+        private void levelsMenu_Level_ButtonClick(object sender, EventArgs e)
+        {
+            LevelsMenu tempLevelsMenu = (LevelsMenu)sender;
+            currentLevelNumber = tempLevelsMenu.selectedLevel;
+
+            level_Selection();
+        }
+
+        private void level_Selection()
+        {
+            switch (currentLevelNumber)
+            {
+                case 1:
+                    currentLevel = new Level1();
+                    break;
+                case 2:
+                    currentLevel = new Level2();
+                    break;
+                case 3:
+                    currentLevel = new Level3();
+                    break;
+                case 4:
+                    currentLevel = new Level4();
+                    break;
+                //case 5:
+                //    currentLevel = new Level5();
+                //    break;
+                //case 6:
+                //    currentLevel = new Level6();
+                //    break;
+
+                default:
+                    break;
+            }
+
+            level_Setup();
+        }
+
+        private void level_Setup()
         {
             LevelsMenu_Close();
+            HeartBar_Open();
+            heartBar.SetHearts(numberOfLife);
 
-            Level2 level2 = new Level2();
+            currentLevel.BackColor = Color.Transparent;
 
-            level2.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(currentLevel, "currentLevel");
+            currentLevel.Name = "currentLevel";
+            Controls.Add(currentLevel);
 
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
-            resources.ApplyResources(level2, "level2");
-            level2.Name = "level2";
-            Controls.Add(level2);
-
-            level2.Passed += new EventHandler(Level2_Passed);
-            level2.Missed += new EventHandler(Level2_Missed);
-        }
-
-        private void Level2_Passed(object sender, EventArgs e)
-        {
-            hallOfFame.SetLevelLabel(currentLevelNumber);
-            hallOfFame.Show();
-        }
-
-        private void Level2_Missed(object sender, EventArgs e)
-        {
-            heart--;
-            hallOfFame.Show();
-        }
-
-        //  Màn 3
-        private void levelsMenu_Level3_ButtonClick(object sender, EventArgs e)
-        {
-            LevelsMenu_Close();
-
-            Level3 level3 = new Level3();
-
-            level3.BackColor = System.Drawing.Color.Transparent;
-
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
-            resources.ApplyResources(level3, "level3");
-            level3.Name = "level3";
-            Controls.Add(level3);
-
-            level3.Passed += new EventHandler(Level3_Passed);
-            level3.Missed += new EventHandler(Level3_Missed);
-        }
-
-        private void Level3_Passed(object sender, EventArgs e)
-        {
-            hallOfFame.SetLevelLabel(currentLevelNumber);
-            hallOfFame.Show();
-        }
-
-        private void Level3_Missed(object sender, EventArgs e)
-        {
-            heart--;
-            hallOfFame.Show();
+            currentLevel.rightAnswer += new EventHandler(RightAnswer);
+            currentLevel.wrongAnswer += new EventHandler(WrongAnswer);
         }
         #endregion
 
@@ -243,6 +233,9 @@ namespace GAME
         {
             currentLevelNumber++;
 
+            Controls.Remove(currentLevel);
+            level_Selection();
+
             HallOfFame_Close();
         }
 
@@ -254,5 +247,29 @@ namespace GAME
         }
         #endregion
 
+        #region Quản lý HeartBar
+        private void HeartBar_Open()
+        {
+            heartBar.Show();
+        }
+
+        private void HeartBar_Close()
+        {
+            heartBar.Hide();
+        }
+        #endregion
+
+        #region Quản lý ContinueSelection
+        private void ContinueSelection_Open()
+        {
+            continueSelection.Show();
+            currentLevel.Enabled = false;
+        }
+
+        private void ContinueSelection_Close()
+        {
+            continueSelection.Hide();
+        }
+        #endregion
     }
 }

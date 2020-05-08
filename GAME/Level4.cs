@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace GAME
 {
-    public partial class Level4 : UserControl
+    public partial class Level4 : PrefabLevel
     {
         public Level4()
         {
             InitializeComponent();
         }
 
-        #region Thêm một số HandleEvent
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Passed")]
-        public event EventHandler Passed;
+        private void RightAnswerHandle(object sender, EventArgs e)
+        {
+            RightAnswer(EventArgs.Empty);
+        }
 
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Missed")]
-        public event EventHandler Missed;
-
-        #endregion
+        private void WrongAnswerHandle(object sender, EventArgs e)
+        {
+            WrongAnswer(EventArgs.Empty);
+        }
     }
 }

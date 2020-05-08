@@ -9,9 +9,9 @@ namespace GAME
 {
     public static class MyExtensionMethodForm
     {
-        public static EventHandler Passed(this UserControl userControl)
-        {
-            return 
-        }
+        //public static EventHandler Passed(this UserControl userControl)
+        //{
+        //    //return 
+        //}
     }
 }
