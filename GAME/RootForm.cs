@@ -273,7 +273,7 @@ namespace GAME
         /// <param name="e"></param>
         private void notificationTimer_Tick(object sender, EventArgs e)
         {
-            label_Notification.Location.Y += 3;
+            //label_Notification.Location.Y += 3;
         }
         #endregion
 
