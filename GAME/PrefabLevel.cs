@@ -12,11 +12,14 @@ namespace GAME
 {
     public partial class PrefabLevel : UserControl
     {
+        protected string suggestionText = "";
+
+        public string SuggestionText { get => suggestionText; set => suggestionText = value; }
+
         public PrefabLevel()
         {
             InitializeComponent();
         }
-
 
         protected virtual void RightAnswer(EventArgs e)
         {

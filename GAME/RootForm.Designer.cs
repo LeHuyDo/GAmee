@@ -38,20 +38,26 @@
             this.btn_Size = new FontAwesome.Sharp.IconButton();
             this.btn_Close = new FontAwesome.Sharp.IconButton();
             this.menuTimer = new System.Windows.Forms.Timer(this.components);
-            this.menuPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.menuLabel = new System.Windows.Forms.Label();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.continueSelection = new GAME.ContinueSelection();
+            this.menuPanel = new System.Windows.Forms.Panel();
+            this.btn_Information = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_LevelMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_HowToPlay = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Sound = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.btn_Suggestion = new Bunifu.Framework.UI.BunifuImageButton();
+            this.suggestionTable = new GAME.SuggestionTable();
             this.heartBar = new GAME.HeartBar();
+            this.levelsMenu = new GAME.LevelsMenu();
+            this.continueSelection = new GAME.ContinueSelection();
             this.hallOfFame = new GAME.HallOfFame();
             this.mainMenu = new GAME.MainMenu();
-            this.levelsMenu = new GAME.LevelsMenu();
+            this.label_Notification = new System.Windows.Forms.Label();
+            this.notificationTimer = new System.Windows.Forms.Timer(this.components);
             this.toolBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
             this.menuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Suggestion)).BeginInit();
             this.SuspendLayout();
             // 
             // toolBar
@@ -143,155 +149,174 @@
             // 
             // menuTimer
             // 
-            this.menuTimer.Interval = 16;
+            this.menuTimer.Interval = 25;
             this.menuTimer.Tick += new System.EventHandler(this.menuTimer_Tick);
-            // 
-            // menuPanel
-            // 
-            resources.ApplyResources(this.menuPanel, "menuPanel");
-            this.menuPanel.Controls.Add(this.menuLabel);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton4);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton1);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton3);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton2);
-            this.menuPanel.GradientBottomLeft = System.Drawing.Color.Cyan;
-            this.menuPanel.GradientBottomRight = System.Drawing.Color.Chartreuse;
-            this.menuPanel.GradientTopLeft = System.Drawing.Color.DarkGreen;
-            this.menuPanel.GradientTopRight = System.Drawing.Color.Purple;
-            this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Quality = 1;
             // 
             // menuLabel
             // 
             resources.ApplyResources(this.menuLabel, "menuLabel");
             this.menuLabel.BackColor = System.Drawing.Color.Transparent;
+            this.menuLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.menuLabel.Name = "menuLabel";
             // 
-            // bunifuFlatButton4
+            // menuPanel
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton4, "bunifuFlatButton4");
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 90D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.menuPanel.Controls.Add(this.menuLabel);
+            this.menuPanel.Controls.Add(this.btn_Information);
+            this.menuPanel.Controls.Add(this.btn_LevelMenu);
+            this.menuPanel.Controls.Add(this.btn_HowToPlay);
+            this.menuPanel.Controls.Add(this.btn_Sound);
+            resources.ApplyResources(this.menuPanel, "menuPanel");
+            this.menuPanel.Name = "menuPanel";
             // 
-            // bunifuFlatButton1
+            // btn_Information
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton1, "bunifuFlatButton1");
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Information.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            resources.ApplyResources(this.btn_Information, "btn_Information");
+            this.btn_Information.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Information.BorderRadius = 0;
+            this.btn_Information.ButtonText = "Thông tin trò chơi";
+            this.btn_Information.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Information.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Information.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Information.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Information.Iconimage")));
+            this.btn_Information.Iconimage_right = null;
+            this.btn_Information.Iconimage_right_Selected = null;
+            this.btn_Information.Iconimage_Selected = null;
+            this.btn_Information.IconMarginLeft = 0;
+            this.btn_Information.IconMarginRight = 0;
+            this.btn_Information.IconRightVisible = true;
+            this.btn_Information.IconRightZoom = 0D;
+            this.btn_Information.IconVisible = true;
+            this.btn_Information.IconZoom = 90D;
+            this.btn_Information.IsTab = false;
+            this.btn_Information.Name = "btn_Information";
+            this.btn_Information.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Information.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_Information.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Information.selected = false;
+            this.btn_Information.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Information.Textcolor = System.Drawing.Color.White;
+            this.btn_Information.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton3
+            // btn_LevelMenu
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton3, "bunifuFlatButton3");
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LevelMenu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            resources.ApplyResources(this.btn_LevelMenu, "btn_LevelMenu");
+            this.btn_LevelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_LevelMenu.BorderRadius = 0;
+            this.btn_LevelMenu.ButtonText = "Màn chơi";
+            this.btn_LevelMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_LevelMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_LevelMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_LevelMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_LevelMenu.Iconimage")));
+            this.btn_LevelMenu.Iconimage_right = null;
+            this.btn_LevelMenu.Iconimage_right_Selected = null;
+            this.btn_LevelMenu.Iconimage_Selected = null;
+            this.btn_LevelMenu.IconMarginLeft = 0;
+            this.btn_LevelMenu.IconMarginRight = 0;
+            this.btn_LevelMenu.IconRightVisible = true;
+            this.btn_LevelMenu.IconRightZoom = 0D;
+            this.btn_LevelMenu.IconVisible = true;
+            this.btn_LevelMenu.IconZoom = 90D;
+            this.btn_LevelMenu.IsTab = false;
+            this.btn_LevelMenu.Name = "btn_LevelMenu";
+            this.btn_LevelMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_LevelMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_LevelMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_LevelMenu.selected = false;
+            this.btn_LevelMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LevelMenu.Textcolor = System.Drawing.Color.White;
+            this.btn_LevelMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LevelMenu.Click += new System.EventHandler(this.btn_LevelMenu_Click);
             // 
-            // bunifuFlatButton2
+            // btn_HowToPlay
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton2, "bunifuFlatButton2");
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HowToPlay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            resources.ApplyResources(this.btn_HowToPlay, "btn_HowToPlay");
+            this.btn_HowToPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_HowToPlay.BorderRadius = 0;
+            this.btn_HowToPlay.ButtonText = "Hướng dẫn";
+            this.btn_HowToPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HowToPlay.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_HowToPlay.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_HowToPlay.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_HowToPlay.Iconimage")));
+            this.btn_HowToPlay.Iconimage_right = null;
+            this.btn_HowToPlay.Iconimage_right_Selected = null;
+            this.btn_HowToPlay.Iconimage_Selected = null;
+            this.btn_HowToPlay.IconMarginLeft = 0;
+            this.btn_HowToPlay.IconMarginRight = 0;
+            this.btn_HowToPlay.IconRightVisible = true;
+            this.btn_HowToPlay.IconRightZoom = 0D;
+            this.btn_HowToPlay.IconVisible = true;
+            this.btn_HowToPlay.IconZoom = 90D;
+            this.btn_HowToPlay.IsTab = false;
+            this.btn_HowToPlay.Name = "btn_HowToPlay";
+            this.btn_HowToPlay.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_HowToPlay.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_HowToPlay.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_HowToPlay.selected = false;
+            this.btn_HowToPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HowToPlay.Textcolor = System.Drawing.Color.White;
+            this.btn_HowToPlay.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // continueSelection
+            // btn_Sound
             // 
-            this.continueSelection.BackColor = System.Drawing.Color.DimGray;
-            resources.ApplyResources(this.continueSelection, "continueSelection");
-            this.continueSelection.Name = "continueSelection";
+            this.btn_Sound.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            resources.ApplyResources(this.btn_Sound, "btn_Sound");
+            this.btn_Sound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Sound.BorderRadius = 0;
+            this.btn_Sound.ButtonText = "Âm thanh";
+            this.btn_Sound.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Sound.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Sound.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Sound.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Sound.Iconimage")));
+            this.btn_Sound.Iconimage_right = null;
+            this.btn_Sound.Iconimage_right_Selected = null;
+            this.btn_Sound.Iconimage_Selected = null;
+            this.btn_Sound.IconMarginLeft = 0;
+            this.btn_Sound.IconMarginRight = 0;
+            this.btn_Sound.IconRightVisible = true;
+            this.btn_Sound.IconRightZoom = 0D;
+            this.btn_Sound.IconVisible = true;
+            this.btn_Sound.IconZoom = 90D;
+            this.btn_Sound.IsTab = false;
+            this.btn_Sound.Name = "btn_Sound";
+            this.btn_Sound.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Sound.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_Sound.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Sound.selected = false;
+            this.btn_Sound.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sound.Textcolor = System.Drawing.Color.White;
+            this.btn_Sound.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.toolBar;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // btn_Suggestion
+            // 
+            this.btn_Suggestion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Suggestion.Image = global::GAME.Properties.Resources.suggestion_nonActive1;
+            this.btn_Suggestion.ImageActive = null;
+            resources.ApplyResources(this.btn_Suggestion, "btn_Suggestion");
+            this.btn_Suggestion.Name = "btn_Suggestion";
+            this.btn_Suggestion.TabStop = false;
+            this.btn_Suggestion.Zoom = 10;
+            this.btn_Suggestion.Click += new System.EventHandler(this.btn_Suggestion_Click);
+            this.btn_Suggestion.MouseLeave += new System.EventHandler(this.btn_Suggestion_MouseLeave);
+            this.btn_Suggestion.MouseHover += new System.EventHandler(this.btn_Suggestion_MouseHover);
+            // 
+            // suggestionTable
+            // 
+            this.suggestionTable.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.suggestionTable, "suggestionTable");
+            this.suggestionTable.Name = "suggestionTable";
+            this.suggestionTable.PayToSuggestion += new System.EventHandler(this.suggestionTable_PayToSuggestion);
             // 
             // heartBar
             // 
@@ -299,11 +324,24 @@
             resources.ApplyResources(this.heartBar, "heartBar");
             this.heartBar.Name = "heartBar";
             // 
+            // levelsMenu
+            // 
+            this.levelsMenu.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.levelsMenu, "levelsMenu");
+            this.levelsMenu.Name = "levelsMenu";
+            this.levelsMenu.Level_ButtonClick += new System.EventHandler(this.levelsMenu_Level_ButtonClick);
+            // 
+            // continueSelection
+            // 
+            this.continueSelection.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.continueSelection, "continueSelection");
+            this.continueSelection.Name = "continueSelection";
+            // 
             // hallOfFame
             // 
             this.hallOfFame.BackColor = System.Drawing.Color.DimGray;
-            this.hallOfFame.CurrentLevel = 1;
             resources.ApplyResources(this.hallOfFame, "hallOfFame");
+            this.hallOfFame.CurrentLevel = 1;
             this.hallOfFame.Name = "hallOfFame";
             this.hallOfFame.NextLevel += new System.EventHandler(this.hallOfFame_NextLevel);
             this.hallOfFame.PlayAgain += new System.EventHandler(this.hallOfFame_PlayAgain);
@@ -318,18 +356,25 @@
             this.mainMenu.ChoitiepButtonClick += new System.EventHandler(this.mainMenu_ChoitiepButtonClick);
             this.mainMenu.CachchoiButtonClick += new System.EventHandler(this.mainMenu_CachchoiButtonClick);
             // 
-            // levelsMenu
+            // label_Notification
             // 
-            this.levelsMenu.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.levelsMenu, "levelsMenu");
-            this.levelsMenu.Name = "levelsMenu";
-            this.levelsMenu.Level_ButtonClick += new System.EventHandler(this.levelsMenu_Level_ButtonClick);
+            resources.ApplyResources(this.label_Notification, "label_Notification");
+            this.label_Notification.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label_Notification.Name = "label_Notification";
+            // 
+            // notificationTimer
+            // 
+            this.notificationTimer.Interval = 25;
+            this.notificationTimer.Tick += new System.EventHandler(this.notificationTimer_Tick);
             // 
             // RootForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+            this.Controls.Add(this.label_Notification);
+            this.Controls.Add(this.suggestionTable);
+            this.Controls.Add(this.btn_Suggestion);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.continueSelection);
             this.Controls.Add(this.heartBar);
@@ -346,17 +391,18 @@
             this.toolBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.menuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Suggestion)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuGradientPanel menuPanel;
         private System.Windows.Forms.Label menuLabel;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Information;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_LevelMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_HowToPlay;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Sound;
         private System.Windows.Forms.Panel toolBar;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
@@ -370,6 +416,12 @@
         private HallOfFame hallOfFame;
         private HeartBar heartBar;
         private ContinueSelection continueSelection;
+        private System.Windows.Forms.Panel menuPanel;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuImageButton btn_Suggestion;
+        private SuggestionTable suggestionTable;
+        private System.Windows.Forms.Label label_Notification;
+        private System.Windows.Forms.Timer notificationTimer;
     }
 }
 

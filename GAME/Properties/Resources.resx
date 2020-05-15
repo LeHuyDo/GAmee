@@ -166,8 +166,8 @@
   <data name="object_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\object_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="suggestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suggestion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="first-aid-cross-in-black-inside-a-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\first-aid-cross-in-black-inside-a-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,6 +256,9 @@
   <data name="arrow-loop-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-loop-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="playAgain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playAgain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow-navigate-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-navigate-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -276,6 +279,9 @@
   </data>
   <data name="triple-arrow-merging-to-one" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\triple-arrow-merging-to-one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qR0Wq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qR0Wq.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="document-with-line-chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-with-line-chart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,6 +325,9 @@
   <data name="scroll-variant-with-seal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scroll-variant-with-seal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="b4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow-through" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-through.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -336,9 +345,6 @@
   </data>
   <data name="bNorth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bNorth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="navigation-history-interface-symbol-of-a-clock-with-an-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\navigation-history-interface-symbol-of-a-clock-with-an-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -385,8 +391,8 @@
   <data name="menu_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow-loop-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-loop-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nextLevel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nextLevel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clipboard-empty-in-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clipboard-empty-in-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -439,6 +445,9 @@
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="suggestion_nonActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suggestion_nonActive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="object_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\object_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -450,6 +459,9 @@
   </data>
   <data name="arrow-over-a-rectangular-element" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-over-a-rectangular-element.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heartDeath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heartDeath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder-shared" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder-shared.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -573,6 +585,9 @@
   </data>
   <data name="italics-font-style-variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\italics-font-style-variant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="find-and-replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find-and-replace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="garbage-full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\garbage-full.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -835,6 +850,9 @@
   <data name="map-route" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map-route.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Blue Green Circle Gradient Android Wallpaper-360x640" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Green Circle Gradient Android Wallpaper-360x640.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="undo-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undo-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -867,9 +885,6 @@
   </data>
   <data name="magic-wand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\magic-wand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="broken-heart-silhouette-shape" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\broken-heart-silhouette-shape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="navigate-arrow-button-to-beginning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\navigate-arrow-button-to-beginning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -943,6 +958,9 @@
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="document-pinned" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-pinned.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -961,8 +979,14 @@
   <data name="trafficlight-in-green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trafficlight-in-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="levelComplete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\levelComplete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bWest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bWest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cd-burning-application" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cd-burning-application.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -982,6 +1006,9 @@
   <data name="bookmarks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookmarks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="arrow-loop-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow-loop-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="circle-outline-with-exclamation-point" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle-outline-with-exclamation-point.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -990,6 +1017,9 @@
   </data>
   <data name="line-spacing-text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\line-spacing-text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zoom-out-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zoom-out-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quotation-mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quotation-mark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1036,17 +1066,17 @@
   <data name="selection-view-interface-symbol-of-a-magnifying-glass-inside-a-broken-line-square" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\selection-view-interface-symbol-of-a-magnifying-glass-inside-a-broken-line-square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="find-and-replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find-and-replace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="document-width" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-width.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zoom-out-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zoom-out-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menuIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="b4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="broken-heart-silhouette-shape" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\broken-heart-silhouette-shape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-merge-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-merge-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1108,7 +1138,7 @@
   <data name="traffic-light-silhouette-variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\traffic-light-silhouette-variant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="heartDeath" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heartDeath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="suggestion_nonActive1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suggestion_nonActive1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

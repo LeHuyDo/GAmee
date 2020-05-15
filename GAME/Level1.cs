@@ -19,6 +19,8 @@ namespace GAME
 
         private void Level1_Load(object sender, EventArgs e)
         {
+            suggestionText = "Chú ý là hoa quả nhé :3";
+
             ControlExtension.Draggable(btn_QuaDua, true);
             ControlExtension.Draggable(btn_CaRot, true);
             ControlExtension.Draggable(btn_QuaTao, true);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace GAME
         private PrefabLevel currentLevel;
 
         private int numberOfLife = 5;
+        private int point = 5;
 
         private bool isMenuShow = false;
         private int currentLevelNumber = 1;
@@ -121,6 +123,24 @@ namespace GAME
         {
 
         }
+
+        private void btn_LevelMenu_Click(object sender, EventArgs e)
+        {
+            ToolbarOpen();
+            LevelsMenu_Open();
+            //  ContinueSelection vẫn hiện
+            try
+            {
+                if (currentLevel != null)
+                    Controls.Remove(currentLevel);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            btn_Menu_Click(sender, e);
+        }
         #endregion
 
         #region Màn chơi
@@ -188,15 +208,75 @@ namespace GAME
             HeartBar_Open();
             heartBar.SetHearts(numberOfLife);
 
-            currentLevel.BackColor = Color.Transparent;
+            btn_Suggestion.Show();
 
-            resources.ApplyResources(currentLevel, "currentLevel");
-            currentLevel.Name = "currentLevel";
-            Controls.Add(currentLevel);
+            try
+            {
+                currentLevel.BackColor = Color.Transparent;
 
-            currentLevel.rightAnswer += new EventHandler(RightAnswer);
-            currentLevel.wrongAnswer += new EventHandler(WrongAnswer);
+                resources.ApplyResources(currentLevel, "currentLevel");
+                currentLevel.Name = "currentLevel";
+                Controls.Add(currentLevel);
+
+                currentLevel.rightAnswer += new EventHandler(RightAnswer);
+                currentLevel.wrongAnswer += new EventHandler(WrongAnswer);
+
+                //  Cài đặt gợi ý cho suggestionTable
+                suggestionTable.SetSuggestionText(currentLevel.SuggestionText);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK);
+            }
+
         }
+
+        #region Quản lý gợi ý
+        private void btn_Suggestion_MouseHover(object sender, EventArgs e)
+        {
+            btn_Suggestion.Image = Properties.Resources.suggestion;
+        }
+
+        private void btn_Suggestion_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Suggestion.Image = Properties.Resources.suggestion_nonActive1;
+        }
+
+        private void btn_Suggestion_Click(object sender, EventArgs e)
+        {
+            suggestionTable.Show();
+        }
+
+        /// <summary>
+        /// Trừ điểm khi chọn gợi ý
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void suggestionTable_PayToSuggestion(object sender, EventArgs e)
+        {
+            if (point >= 5)
+            {
+                point -= 5;
+
+                suggestionTable.panel_SuggestionText_Show();
+            }
+            else
+            {
+                notificationTimer.Start();
+            }
+        }
+
+        /// <summary>
+        /// Hiệu ứng làm mờ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void notificationTimer_Tick(object sender, EventArgs e)
+        {
+            label_Notification.Location.Y += 3;
+        }
+        #endregion
+
         #endregion
 
         #region Quản lý LevelsMenu
@@ -227,6 +307,7 @@ namespace GAME
         private void hallOfFame_LevelMenuOpen(object sender, EventArgs e)
         {
             HallOfFame_Close();
+            LevelsMenu_Open();
         }
 
         private void hallOfFame_NextLevel(object sender, EventArgs e)
@@ -241,7 +322,8 @@ namespace GAME
 
         private void hallOfFame_PlayAgain(object sender, EventArgs e)
         {
-
+            Controls.Remove(currentLevel);
+            level_Selection();
 
             HallOfFame_Close();
         }
@@ -271,5 +353,6 @@ namespace GAME
             continueSelection.Hide();
         }
         #endregion
+
     }
 }

@@ -653,6 +653,16 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_Green_Circle_Gradient_Android_Wallpaper_360x640 {
+            get {
+                object obj = ResourceManager.GetObject("Blue Green Circle Gradient Android Wallpaper-360x640", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bNorth {
             get {
                 object obj = ResourceManager.GetObject("bNorth", resourceCulture);
@@ -1363,6 +1373,16 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap door {
+            get {
+                object obj = ResourceManager.GetObject("door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap door_exit {
             get {
                 object obj = ResourceManager.GetObject("door-exit", resourceCulture);
@@ -1983,6 +2003,16 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap levelComplete {
+            get {
+                object obj = ResourceManager.GetObject("levelComplete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lifebelt {
             get {
                 object obj = ResourceManager.GetObject("lifebelt", resourceCulture);
@@ -2203,6 +2233,16 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menuIcon {
+            get {
+                object obj = ResourceManager.GetObject("menuIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap microsoft_word_document_file {
             get {
                 object obj = ResourceManager.GetObject("microsoft-word-document-file", resourceCulture);
@@ -2356,6 +2396,16 @@ namespace GAME.Properties {
         internal static System.Drawing.Bitmap navigational_arrow_pointing_down_left_in_a_circle {
             get {
                 object obj = ResourceManager.GetObject("navigational-arrow-pointing-down-left-in-a-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nextLevel {
+            get {
+                object obj = ResourceManager.GetObject("nextLevel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2553,6 +2603,16 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap playAgain {
+            get {
+                object obj = ResourceManager.GetObject("playAgain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus_sign {
             get {
                 object obj = ResourceManager.GetObject("plus-sign", resourceCulture);
@@ -2596,6 +2656,16 @@ namespace GAME.Properties {
         internal static System.Drawing.Bitmap printer_with_document_coming_out_of_machine {
             get {
                 object obj = ResourceManager.GetObject("printer-with-document-coming-out-of-machine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap qR0Wq {
+            get {
+                object obj = ResourceManager.GetObject("qR0Wq", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2978,6 +3048,36 @@ namespace GAME.Properties {
         internal static System.Drawing.Bitmap strikethrough_font_variant {
             get {
                 object obj = ResourceManager.GetObject("strikethrough-font-variant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap suggestion {
+            get {
+                object obj = ResourceManager.GetObject("suggestion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap suggestion_nonActive {
+            get {
+                object obj = ResourceManager.GetObject("suggestion_nonActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap suggestion_nonActive1 {
+            get {
+                object obj = ResourceManager.GetObject("suggestion_nonActive1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -50,10 +50,13 @@
             this.label_Level1.BackColor = System.Drawing.Color.Transparent;
             this.label_Level1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Level1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label_Level1.Location = new System.Drawing.Point(89, 71);
+            this.label_Level1.Location = new System.Drawing.Point(81, 33);
             this.label_Level1.Name = "label_Level1";
-            this.label_Level1.Size = new System.Drawing.Size(537, 93);
+            this.label_Level1.Size = new System.Drawing.Size(541, 221);
             this.label_Level1.TabIndex = 5;
+            this.label_Level1.Text = "Chung cư có 14 người, 3 người ở tầng năm, tầng ba,\r\n4 người ở tầng hai, tầng bốn." +
+    " Sau đó có hai người dọn tới tầng ba.\r\nVậy thang máy được sử dụng nhiều nhất ở t" +
+    "ầng:";
             this.label_Level1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_Level1.Click += new System.EventHandler(this.WrongAnswerHandle);
             // 
