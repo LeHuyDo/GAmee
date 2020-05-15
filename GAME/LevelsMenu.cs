@@ -40,30 +40,35 @@ namespace GAME
             {
                 case Levels.L1:
                     btn_Level1.Enabled = isActive;
+                    btn_Level1.color = isActive? Color.SeaGreen : Color.DarkSeaGreen;
                     checkbox_Level1.Checked = isActive;
 
                     break;
 
                 case Levels.L2:
                     btn_Level2.Enabled = isActive;
+                    btn_Level2.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
                     checkbox_Level2.Checked = isActive;
 
                     break;
 
                 case Levels.L3:
                     btn_Level3.Enabled = isActive;
+                    btn_Level3.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
                     checkbox_Level3.Checked = isActive;
 
                     break;
 
                 case Levels.L4:
                     btn_Level4.Enabled = isActive;
+                    btn_Level4.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
                     checkbox_Level4.Checked = isActive;
 
                     break;
 
                 case Levels.L5:
                     btn_Level5.Enabled = isActive;
+                    btn_Level5.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
                     checkbox_Level5.Checked = isActive;
 
                     break;

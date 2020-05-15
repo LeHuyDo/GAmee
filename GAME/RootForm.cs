@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -16,7 +18,7 @@ namespace GAME
     public partial class RootForm : Form
     {
         private PrefabLevel currentLevel;
-        private Levels currentLevelNumber = Levels.L1;
+        private Levels currentLevelEnum = Levels.L1;
 
         //  Tình trạng từng màn chơi (qua màn/chưa qua)
         private Dictionary<Levels, bool> levelsStatus = new Dictionary<Levels, bool>();
@@ -176,8 +178,10 @@ namespace GAME
         #region Màn chơi
         private void RightAnswer(object sender, EventArgs e)
         {
-            hallOfFame.SetLevelLabel(currentLevelNumber);
+            hallOfFame.SetLevelLabel(currentLevelEnum);
             hallOfFame.Show();
+
+            SetNextLevelActive();
         }
 
         private void WrongAnswer(object sender, EventArgs e)
@@ -197,14 +201,14 @@ namespace GAME
         private void levelsMenu_Level_ButtonClick(object sender, EventArgs e)
         {
             LevelsMenu tempLevelsMenu = (LevelsMenu)sender;
-            currentLevelNumber = tempLevelsMenu.SelectedLevel;
+            currentLevelEnum = tempLevelsMenu.SelectedLevel;
 
             level_Selection();
         }
 
         private void level_Selection()
         {
-            switch (currentLevelNumber)
+            switch (currentLevelEnum)
             {
                 case Levels.L1:
                     currentLevel = new Level1();
@@ -258,7 +262,23 @@ namespace GAME
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK);
             }
+        }
 
+        private void SetNextLevelActive()
+        {
+            bool isFound = false;
+
+            foreach (var item in levelsStatus)
+            {
+                if (isFound)
+                {
+                    levelsStatus[item.Key] = true;
+                    break;
+                }
+
+                if (item.Key == currentLevelEnum)
+                    isFound = true;
+            }
         }
         #endregion
 
@@ -282,7 +302,7 @@ namespace GAME
 
         private void hallOfFame_NextLevel(object sender, EventArgs e)
         {
-            currentLevelNumber++;
+            currentLevelEnum++;
 
             Controls.Remove(currentLevel);
             level_Selection();

@@ -253,7 +253,7 @@
             // bunifuTileButton9
             // 
             this.bunifuTileButton9.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.bunifuTileButton9.color = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton9.color = System.Drawing.Color.DarkSeaGreen;
             this.bunifuTileButton9.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTileButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -273,7 +273,7 @@
             // btn_Level6
             // 
             this.btn_Level6.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level6.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level6.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level6.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -293,7 +293,7 @@
             // btn_Level3
             // 
             this.btn_Level3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level3.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level3.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level3.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -313,7 +313,7 @@
             // bunifuTileButton11
             // 
             this.bunifuTileButton11.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.bunifuTileButton11.color = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton11.color = System.Drawing.Color.DarkSeaGreen;
             this.bunifuTileButton11.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTileButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -333,7 +333,7 @@
             // btn_Level8
             // 
             this.btn_Level8.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level8.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level8.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level8.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -353,7 +353,7 @@
             // btn_Level5
             // 
             this.btn_Level5.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level5.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level5.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level5.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -373,7 +373,7 @@
             // btn_Level2
             // 
             this.btn_Level2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level2.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level2.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level2.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -393,7 +393,7 @@
             // bunifuTileButton10
             // 
             this.bunifuTileButton10.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.bunifuTileButton10.color = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton10.color = System.Drawing.Color.DarkSeaGreen;
             this.bunifuTileButton10.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTileButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -413,7 +413,7 @@
             // btn_Level7
             // 
             this.btn_Level7.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level7.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level7.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level7.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -433,7 +433,7 @@
             // btn_Level4
             // 
             this.btn_Level4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level4.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level4.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level4.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -452,8 +452,8 @@
             // 
             // btn_Level1
             // 
-            this.btn_Level1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_Level1.color = System.Drawing.Color.SeaGreen;
+            this.btn_Level1.BackColor = System.Drawing.Color.SeaGreen;
+            this.btn_Level1.color = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level1.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Level1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -474,6 +474,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel1);
             this.Name = "LevelsMenu";
             this.Size = new System.Drawing.Size(702, 880);
