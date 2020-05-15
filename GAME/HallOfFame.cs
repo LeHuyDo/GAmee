@@ -12,16 +12,16 @@ namespace GAME
 {
     public partial class HallOfFame : UserControl
     {
-        private int currentLevel = 1;
+        private Levels currentLevel = Levels.L1;
 
-        public int CurrentLevel { get => currentLevel; set => currentLevel = value; }
+        public Levels CurrentLevel { get => currentLevel; set => currentLevel = value; }
 
         public HallOfFame()
         {
             InitializeComponent();
         }
 
-        public void SetLevelLabel(int level)
+        public void SetLevelLabel(Levels level)
         {
             currentLevel = level;
             levelLabel.Text = "Màn " + currentLevel.ToString();

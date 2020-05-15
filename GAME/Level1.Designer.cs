@@ -44,7 +44,7 @@
             this.btn_QuaTao.BackColor = System.Drawing.Color.Transparent;
             this.btn_QuaTao.Image = global::GAME.Properties.Resources.object_5;
             this.btn_QuaTao.ImageActive = null;
-            this.btn_QuaTao.Location = new System.Drawing.Point(483, 513);
+            this.btn_QuaTao.Location = new System.Drawing.Point(541, 641);
             this.btn_QuaTao.Name = "btn_QuaTao";
             this.btn_QuaTao.Size = new System.Drawing.Size(88, 107);
             this.btn_QuaTao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -58,7 +58,7 @@
             this.btn_CaRot.BackColor = System.Drawing.Color.Transparent;
             this.btn_CaRot.Image = global::GAME.Properties.Resources.object_4;
             this.btn_CaRot.ImageActive = null;
-            this.btn_CaRot.Location = new System.Drawing.Point(284, 504);
+            this.btn_CaRot.Location = new System.Drawing.Point(304, 641);
             this.btn_CaRot.Name = "btn_CaRot";
             this.btn_CaRot.Size = new System.Drawing.Size(102, 116);
             this.btn_CaRot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -72,7 +72,7 @@
             this.btn_QuaDua.BackColor = System.Drawing.Color.Transparent;
             this.btn_QuaDua.Image = global::GAME.Properties.Resources.object_3;
             this.btn_QuaDua.ImageActive = null;
-            this.btn_QuaDua.Location = new System.Drawing.Point(99, 504);
+            this.btn_QuaDua.Location = new System.Drawing.Point(76, 650);
             this.btn_QuaDua.Name = "btn_QuaDua";
             this.btn_QuaDua.Size = new System.Drawing.Size(74, 107);
             this.btn_QuaDua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,7 +86,7 @@
             this.label_Level1.BackColor = System.Drawing.Color.Transparent;
             this.label_Level1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Level1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label_Level1.Location = new System.Drawing.Point(91, 122);
+            this.label_Level1.Location = new System.Drawing.Point(92, 144);
             this.label_Level1.Name = "label_Level1";
             this.label_Level1.Size = new System.Drawing.Size(537, 93);
             this.label_Level1.TabIndex = 1;
@@ -98,9 +98,9 @@
             this.btn_Xo.BackColor = System.Drawing.Color.Transparent;
             this.btn_Xo.Image = global::GAME.Properties.Resources.object_11;
             this.btn_Xo.ImageActive = null;
-            this.btn_Xo.Location = new System.Drawing.Point(204, 258);
+            this.btn_Xo.Location = new System.Drawing.Point(230, 313);
             this.btn_Xo.Name = "btn_Xo";
-            this.btn_Xo.Size = new System.Drawing.Size(274, 172);
+            this.btn_Xo.Size = new System.Drawing.Size(248, 179);
             this.btn_Xo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Xo.TabIndex = 0;
             this.btn_Xo.TabStop = false;
@@ -108,8 +108,8 @@
             // 
             // Level1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btn_QuaTao);
             this.Controls.Add(this.btn_CaRot);

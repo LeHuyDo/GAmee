@@ -54,7 +54,7 @@
             this.label1.ForeColor = System.Drawing.Color.Peru;
             this.label1.Location = new System.Drawing.Point(105, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 39);
+            this.label1.Size = new System.Drawing.Size(196, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Game Over";
             // 
@@ -66,14 +66,14 @@
             this.label2.ForeColor = System.Drawing.Color.Peru;
             this.label2.Location = new System.Drawing.Point(77, 371);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(387, 39);
+            this.label2.Size = new System.Drawing.Size(373, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cay quá làm ván nữa ?";
             // 
             // ContinueSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::GAME.Properties.Resources.qR0Wq;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
