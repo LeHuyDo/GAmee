@@ -90,17 +90,17 @@
             this.picture_heart1.TabIndex = 0;
             this.picture_heart1.TabStop = false;
             // 
-            // heartBar
+            // HeartBar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.picture_heart5);
             this.Controls.Add(this.picture_heart4);
             this.Controls.Add(this.picture_heart3);
             this.Controls.Add(this.picture_heart2);
             this.Controls.Add(this.picture_heart1);
-            this.Name = "heartBar";
+            this.Name = "HeartBar";
             this.Size = new System.Drawing.Size(233, 32);
             this.Load += new System.EventHandler(this.heartBar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture_heart5)).EndInit();

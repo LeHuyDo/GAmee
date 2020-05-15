@@ -118,7 +118,6 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyExtensionMethodForm.cs" />
     <Compile Include="PrefabLevel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1222,6 +1221,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\suggestion_nonActive1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

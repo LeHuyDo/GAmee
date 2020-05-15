@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
             this.toolBar = new System.Windows.Forms.Panel();
+            this.btn_CoinLabel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Menu = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -45,6 +46,8 @@
             this.btn_HowToPlay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Sound = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.label_Notification = new System.Windows.Forms.Label();
+            this.notificationTimer = new System.Windows.Forms.Timer(this.components);
             this.btn_Suggestion = new Bunifu.Framework.UI.BunifuImageButton();
             this.suggestionTable = new GAME.SuggestionTable();
             this.heartBar = new GAME.HeartBar();
@@ -52,8 +55,6 @@
             this.continueSelection = new GAME.ContinueSelection();
             this.hallOfFame = new GAME.HallOfFame();
             this.mainMenu = new GAME.MainMenu();
-            this.label_Notification = new System.Windows.Forms.Label();
-            this.notificationTimer = new System.Windows.Forms.Timer(this.components);
             this.toolBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
             this.menuPanel.SuspendLayout();
@@ -63,6 +64,7 @@
             // toolBar
             // 
             this.toolBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(52)))), ((int)(((byte)(71)))));
+            this.toolBar.Controls.Add(this.btn_CoinLabel);
             this.toolBar.Controls.Add(this.btn_Menu);
             this.toolBar.Controls.Add(this.bunifuGradientPanel2);
             this.toolBar.Controls.Add(this.bunifuGradientPanel1);
@@ -71,6 +73,36 @@
             this.toolBar.Controls.Add(this.btn_Close);
             resources.ApplyResources(this.toolBar, "toolBar");
             this.toolBar.Name = "toolBar";
+            // 
+            // btn_CoinLabel
+            // 
+            this.btn_CoinLabel.Activecolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_CoinLabel, "btn_CoinLabel");
+            this.btn_CoinLabel.BorderRadius = 0;
+            this.btn_CoinLabel.ButtonText = "15";
+            this.btn_CoinLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btn_CoinLabel.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_CoinLabel.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.Iconimage = global::GAME.Properties.Resources.coin;
+            this.btn_CoinLabel.Iconimage_right = null;
+            this.btn_CoinLabel.Iconimage_right_Selected = null;
+            this.btn_CoinLabel.Iconimage_Selected = null;
+            this.btn_CoinLabel.IconMarginLeft = 0;
+            this.btn_CoinLabel.IconMarginRight = 0;
+            this.btn_CoinLabel.IconRightVisible = true;
+            this.btn_CoinLabel.IconRightZoom = 0D;
+            this.btn_CoinLabel.IconVisible = true;
+            this.btn_CoinLabel.IconZoom = 95D;
+            this.btn_CoinLabel.IsTab = false;
+            this.btn_CoinLabel.Name = "btn_CoinLabel";
+            this.btn_CoinLabel.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.OnHoverTextColor = System.Drawing.Color.Chartreuse;
+            this.btn_CoinLabel.selected = false;
+            this.btn_CoinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_CoinLabel.Textcolor = System.Drawing.Color.Yellow;
+            this.btn_CoinLabel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Menu
             // 
@@ -298,6 +330,17 @@
             this.bunifuDragControl1.TargetControl = this.toolBar;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // label_Notification
+            // 
+            resources.ApplyResources(this.label_Notification, "label_Notification");
+            this.label_Notification.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label_Notification.Name = "label_Notification";
+            // 
+            // notificationTimer
+            // 
+            this.notificationTimer.Interval = 33;
+            this.notificationTimer.Tick += new System.EventHandler(this.notificationTimer_Tick);
+            // 
             // btn_Suggestion
             // 
             this.btn_Suggestion.BackColor = System.Drawing.Color.Transparent;
@@ -341,7 +384,7 @@
             // 
             this.hallOfFame.BackColor = System.Drawing.Color.DimGray;
             resources.ApplyResources(this.hallOfFame, "hallOfFame");
-            this.hallOfFame.CurrentLevel = 1;
+            this.hallOfFame.CurrentLevel = Levels.L1;
             this.hallOfFame.Name = "hallOfFame";
             this.hallOfFame.NextLevel += new System.EventHandler(this.hallOfFame_NextLevel);
             this.hallOfFame.PlayAgain += new System.EventHandler(this.hallOfFame_PlayAgain);
@@ -356,21 +399,10 @@
             this.mainMenu.ChoitiepButtonClick += new System.EventHandler(this.mainMenu_ChoitiepButtonClick);
             this.mainMenu.CachchoiButtonClick += new System.EventHandler(this.mainMenu_CachchoiButtonClick);
             // 
-            // label_Notification
-            // 
-            resources.ApplyResources(this.label_Notification, "label_Notification");
-            this.label_Notification.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label_Notification.Name = "label_Notification";
-            // 
-            // notificationTimer
-            // 
-            this.notificationTimer.Interval = 25;
-            this.notificationTimer.Tick += new System.EventHandler(this.notificationTimer_Tick);
-            // 
             // RootForm
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
             this.Controls.Add(this.label_Notification);
             this.Controls.Add(this.suggestionTable);
@@ -422,6 +454,7 @@
         private SuggestionTable suggestionTable;
         private System.Windows.Forms.Label label_Notification;
         private System.Windows.Forms.Timer notificationTimer;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_CoinLabel;
     }
 }
 

@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelsMenu));
             this.endPanel = new System.Windows.Forms.Label();
             this.checkbox_Level1 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox3 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox6 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkbox_Level4 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkbox_Level7 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCheckbox9 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.checkbox_Level2 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox4 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox7 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkbox_Level5 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkbox_Level8 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCheckbox10 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox5 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkbox_Level3 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.checkbox_Level6 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCheckbox8 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuTileButton9 = new Bunifu.Framework.UI.BunifuTileButton();
@@ -78,37 +78,37 @@
             this.checkbox_Level1.Size = new System.Drawing.Size(20, 20);
             this.checkbox_Level1.TabIndex = 2;
             // 
-            // bunifuCheckbox3
+            // checkbox_Level4
             // 
-            this.bunifuCheckbox3.BackColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox3.ChechedOffColor = System.Drawing.Color.Gray;
-            this.bunifuCheckbox3.Checked = true;
-            this.bunifuCheckbox3.CheckedOnColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox3.Enabled = false;
-            this.bunifuCheckbox3.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox3.Location = new System.Drawing.Point(178, 448);
-            this.bunifuCheckbox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuCheckbox3.Name = "bunifuCheckbox3";
-            this.bunifuCheckbox3.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox3.TabIndex = 2;
+            this.checkbox_Level4.BackColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level4.ChechedOffColor = System.Drawing.Color.Gray;
+            this.checkbox_Level4.Checked = true;
+            this.checkbox_Level4.CheckedOnColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level4.Enabled = false;
+            this.checkbox_Level4.ForeColor = System.Drawing.Color.White;
+            this.checkbox_Level4.Location = new System.Drawing.Point(178, 448);
+            this.checkbox_Level4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox_Level4.Name = "checkbox_Level4";
+            this.checkbox_Level4.Size = new System.Drawing.Size(20, 20);
+            this.checkbox_Level4.TabIndex = 2;
             // 
-            // bunifuCheckbox6
+            // checkbox_Level7
             // 
-            this.bunifuCheckbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox6.ChechedOffColor = System.Drawing.Color.Gray;
-            this.bunifuCheckbox6.Checked = false;
-            this.bunifuCheckbox6.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox6.Enabled = false;
-            this.bunifuCheckbox6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox6.Location = new System.Drawing.Point(178, 680);
-            this.bunifuCheckbox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuCheckbox6.Name = "bunifuCheckbox6";
-            this.bunifuCheckbox6.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox6.TabIndex = 2;
+            this.checkbox_Level7.BackColor = System.Drawing.Color.Gray;
+            this.checkbox_Level7.ChechedOffColor = System.Drawing.Color.Gray;
+            this.checkbox_Level7.Checked = false;
+            this.checkbox_Level7.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkbox_Level7.Enabled = false;
+            this.checkbox_Level7.ForeColor = System.Drawing.Color.White;
+            this.checkbox_Level7.Location = new System.Drawing.Point(178, 680);
+            this.checkbox_Level7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox_Level7.Name = "checkbox_Level7";
+            this.checkbox_Level7.Size = new System.Drawing.Size(20, 20);
+            this.checkbox_Level7.TabIndex = 2;
             // 
             // bunifuCheckbox9
             // 
-            this.bunifuCheckbox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox9.BackColor = System.Drawing.Color.Gray;
             this.bunifuCheckbox9.ChechedOffColor = System.Drawing.Color.Gray;
             this.bunifuCheckbox9.Checked = false;
             this.bunifuCheckbox9.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
@@ -134,37 +134,37 @@
             this.checkbox_Level2.Size = new System.Drawing.Size(20, 20);
             this.checkbox_Level2.TabIndex = 2;
             // 
-            // bunifuCheckbox4
+            // checkbox_Level5
             // 
-            this.bunifuCheckbox4.BackColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox4.ChechedOffColor = System.Drawing.Color.Gray;
-            this.bunifuCheckbox4.Checked = true;
-            this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox4.Enabled = false;
-            this.bunifuCheckbox4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox4.Location = new System.Drawing.Point(392, 448);
-            this.bunifuCheckbox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuCheckbox4.Name = "bunifuCheckbox4";
-            this.bunifuCheckbox4.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox4.TabIndex = 2;
+            this.checkbox_Level5.BackColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level5.ChechedOffColor = System.Drawing.Color.Gray;
+            this.checkbox_Level5.Checked = true;
+            this.checkbox_Level5.CheckedOnColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level5.Enabled = false;
+            this.checkbox_Level5.ForeColor = System.Drawing.Color.White;
+            this.checkbox_Level5.Location = new System.Drawing.Point(392, 448);
+            this.checkbox_Level5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox_Level5.Name = "checkbox_Level5";
+            this.checkbox_Level5.Size = new System.Drawing.Size(20, 20);
+            this.checkbox_Level5.TabIndex = 2;
             // 
-            // bunifuCheckbox7
+            // checkbox_Level8
             // 
-            this.bunifuCheckbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox7.ChechedOffColor = System.Drawing.Color.Gray;
-            this.bunifuCheckbox7.Checked = false;
-            this.bunifuCheckbox7.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox7.Enabled = false;
-            this.bunifuCheckbox7.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox7.Location = new System.Drawing.Point(392, 680);
-            this.bunifuCheckbox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuCheckbox7.Name = "bunifuCheckbox7";
-            this.bunifuCheckbox7.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox7.TabIndex = 2;
+            this.checkbox_Level8.BackColor = System.Drawing.Color.Gray;
+            this.checkbox_Level8.ChechedOffColor = System.Drawing.Color.Gray;
+            this.checkbox_Level8.Checked = false;
+            this.checkbox_Level8.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.checkbox_Level8.Enabled = false;
+            this.checkbox_Level8.ForeColor = System.Drawing.Color.White;
+            this.checkbox_Level8.Location = new System.Drawing.Point(392, 680);
+            this.checkbox_Level8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox_Level8.Name = "checkbox_Level8";
+            this.checkbox_Level8.Size = new System.Drawing.Size(20, 20);
+            this.checkbox_Level8.TabIndex = 2;
             // 
             // bunifuCheckbox10
             // 
-            this.bunifuCheckbox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox10.BackColor = System.Drawing.Color.Gray;
             this.bunifuCheckbox10.ChechedOffColor = System.Drawing.Color.Gray;
             this.bunifuCheckbox10.Checked = false;
             this.bunifuCheckbox10.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
@@ -176,37 +176,37 @@
             this.bunifuCheckbox10.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox10.TabIndex = 2;
             // 
-            // bunifuCheckbox2
+            // checkbox_Level3
             // 
-            this.bunifuCheckbox2.BackColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.Gray;
-            this.bunifuCheckbox2.Checked = true;
-            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox2.Enabled = false;
-            this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(606, 211);
-            this.bunifuCheckbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuCheckbox2.Name = "bunifuCheckbox2";
-            this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox2.TabIndex = 2;
+            this.checkbox_Level3.BackColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level3.ChechedOffColor = System.Drawing.Color.Gray;
+            this.checkbox_Level3.Checked = true;
+            this.checkbox_Level3.CheckedOnColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level3.Enabled = false;
+            this.checkbox_Level3.ForeColor = System.Drawing.Color.White;
+            this.checkbox_Level3.Location = new System.Drawing.Point(606, 211);
+            this.checkbox_Level3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox_Level3.Name = "checkbox_Level3";
+            this.checkbox_Level3.Size = new System.Drawing.Size(20, 20);
+            this.checkbox_Level3.TabIndex = 2;
             // 
-            // bunifuCheckbox5
+            // checkbox_Level6
             // 
-            this.bunifuCheckbox5.BackColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox5.ChechedOffColor = System.Drawing.Color.Gray;
-            this.bunifuCheckbox5.Checked = true;
-            this.bunifuCheckbox5.CheckedOnColor = System.Drawing.Color.Goldenrod;
-            this.bunifuCheckbox5.Enabled = false;
-            this.bunifuCheckbox5.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox5.Location = new System.Drawing.Point(606, 448);
-            this.bunifuCheckbox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuCheckbox5.Name = "bunifuCheckbox5";
-            this.bunifuCheckbox5.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox5.TabIndex = 2;
+            this.checkbox_Level6.BackColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level6.ChechedOffColor = System.Drawing.Color.Gray;
+            this.checkbox_Level6.Checked = true;
+            this.checkbox_Level6.CheckedOnColor = System.Drawing.Color.Goldenrod;
+            this.checkbox_Level6.Enabled = false;
+            this.checkbox_Level6.ForeColor = System.Drawing.Color.White;
+            this.checkbox_Level6.Location = new System.Drawing.Point(606, 448);
+            this.checkbox_Level6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkbox_Level6.Name = "checkbox_Level6";
+            this.checkbox_Level6.Size = new System.Drawing.Size(20, 20);
+            this.checkbox_Level6.TabIndex = 2;
             // 
             // bunifuCheckbox8
             // 
-            this.bunifuCheckbox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox8.BackColor = System.Drawing.Color.Gray;
             this.bunifuCheckbox8.ChechedOffColor = System.Drawing.Color.Gray;
             this.bunifuCheckbox8.Checked = false;
             this.bunifuCheckbox8.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
@@ -223,15 +223,15 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.bunifuCheckbox8);
-            this.panel1.Controls.Add(this.bunifuCheckbox5);
-            this.panel1.Controls.Add(this.bunifuCheckbox2);
+            this.panel1.Controls.Add(this.checkbox_Level6);
+            this.panel1.Controls.Add(this.checkbox_Level3);
             this.panel1.Controls.Add(this.bunifuCheckbox10);
-            this.panel1.Controls.Add(this.bunifuCheckbox7);
-            this.panel1.Controls.Add(this.bunifuCheckbox4);
+            this.panel1.Controls.Add(this.checkbox_Level8);
+            this.panel1.Controls.Add(this.checkbox_Level5);
             this.panel1.Controls.Add(this.checkbox_Level2);
             this.panel1.Controls.Add(this.bunifuCheckbox9);
-            this.panel1.Controls.Add(this.bunifuCheckbox6);
-            this.panel1.Controls.Add(this.bunifuCheckbox3);
+            this.panel1.Controls.Add(this.checkbox_Level7);
+            this.panel1.Controls.Add(this.checkbox_Level4);
             this.panel1.Controls.Add(this.checkbox_Level1);
             this.panel1.Controls.Add(this.endPanel);
             this.panel1.Controls.Add(this.bunifuTileButton9);
@@ -252,7 +252,7 @@
             // 
             // bunifuTileButton9
             // 
-            this.bunifuTileButton9.BackColor = System.Drawing.Color.DarkGray;
+            this.bunifuTileButton9.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bunifuTileButton9.color = System.Drawing.Color.SeaGreen;
             this.bunifuTileButton9.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton9.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -272,7 +272,7 @@
             // 
             // btn_Level6
             // 
-            this.btn_Level6.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_Level6.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level6.color = System.Drawing.Color.SeaGreen;
             this.btn_Level6.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level6.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -292,7 +292,7 @@
             // 
             // btn_Level3
             // 
-            this.btn_Level3.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_Level3.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level3.color = System.Drawing.Color.SeaGreen;
             this.btn_Level3.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -312,7 +312,7 @@
             // 
             // bunifuTileButton11
             // 
-            this.bunifuTileButton11.BackColor = System.Drawing.Color.DarkGray;
+            this.bunifuTileButton11.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bunifuTileButton11.color = System.Drawing.Color.SeaGreen;
             this.bunifuTileButton11.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton11.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -332,7 +332,7 @@
             // 
             // btn_Level8
             // 
-            this.btn_Level8.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_Level8.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level8.color = System.Drawing.Color.SeaGreen;
             this.btn_Level8.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level8.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -352,7 +352,7 @@
             // 
             // btn_Level5
             // 
-            this.btn_Level5.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_Level5.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level5.color = System.Drawing.Color.SeaGreen;
             this.btn_Level5.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -372,7 +372,7 @@
             // 
             // btn_Level2
             // 
-            this.btn_Level2.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_Level2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level2.color = System.Drawing.Color.SeaGreen;
             this.btn_Level2.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -392,7 +392,7 @@
             // 
             // bunifuTileButton10
             // 
-            this.bunifuTileButton10.BackColor = System.Drawing.Color.DarkGray;
+            this.bunifuTileButton10.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bunifuTileButton10.color = System.Drawing.Color.SeaGreen;
             this.bunifuTileButton10.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton10.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -412,7 +412,7 @@
             // 
             // btn_Level7
             // 
-            this.btn_Level7.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_Level7.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level7.color = System.Drawing.Color.SeaGreen;
             this.btn_Level7.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level7.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -432,7 +432,7 @@
             // 
             // btn_Level4
             // 
-            this.btn_Level4.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_Level4.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level4.color = System.Drawing.Color.SeaGreen;
             this.btn_Level4.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level4.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -452,7 +452,7 @@
             // 
             // btn_Level1
             // 
-            this.btn_Level1.BackColor = System.Drawing.Color.Silver;
+            this.btn_Level1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_Level1.color = System.Drawing.Color.SeaGreen;
             this.btn_Level1.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.btn_Level1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -472,8 +472,8 @@
             // 
             // LevelsMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.panel1);
             this.Name = "LevelsMenu";
             this.Size = new System.Drawing.Size(702, 880);
@@ -498,15 +498,15 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton9;
         private System.Windows.Forms.Label endPanel;
         private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level1;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox3;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox6;
+        private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level4;
+        private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level7;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox9;
         private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level2;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox4;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox7;
+        private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level5;
+        private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level8;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox10;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
+        private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level3;
+        private Bunifu.Framework.UI.BunifuCheckbox checkbox_Level6;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox8;
         private System.Windows.Forms.Panel panel1;
     }

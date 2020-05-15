@@ -9,17 +9,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace GAME
 {
     public partial class RootForm : Form
     {
         private PrefabLevel currentLevel;
+        private Levels currentLevelNumber = Levels.L1;
+
+        //  Tình trạng từng màn chơi (qua màn/chưa qua)
+        private Dictionary<Levels, bool> levelsStatus = new Dictionary<Levels, bool>();
 
         private int numberOfLife = 5;
-        private int point = 5;
+        private int coin = 5;
 
         private bool isMenuShow = false;
-        private int currentLevelNumber = 1;
 
         ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
 
@@ -38,6 +43,13 @@ namespace GAME
             HallOfFame_Close();
             HeartBar_Close();
             ContinueSelection_Close();
+
+            SetCoin();
+
+            levelsStatus.Add(Levels.L1, true);
+            levelsStatus.Add(Levels.L2, false);
+            levelsStatus.Add(Levels.L3, false);
+            levelsStatus.Add(Levels.L4, false);
         }
 
         #region Quản lý Toolbar
@@ -51,6 +63,11 @@ namespace GAME
             toolBar.Hide();
             menuPanel.Hide();
             levelsMenu.Hide();
+        }
+
+        private void SetCoin()
+        {
+            btn_CoinLabel.Text = coin.ToString();
         }
 
         private void btn_Menu_Click(object sender, EventArgs e)
@@ -143,6 +160,19 @@ namespace GAME
         }
         #endregion
 
+        #region Quản lý LevelsMenu
+        private void LevelsMenu_Open()
+        {
+            levelsMenu.SetLevelsActivation(levelsStatus);
+            levelsMenu.Show();
+        }
+
+        private void LevelsMenu_Close()
+        {
+            levelsMenu.Hide();
+        }
+        #endregion
+
         #region Màn chơi
         private void RightAnswer(object sender, EventArgs e)
         {
@@ -167,7 +197,7 @@ namespace GAME
         private void levelsMenu_Level_ButtonClick(object sender, EventArgs e)
         {
             LevelsMenu tempLevelsMenu = (LevelsMenu)sender;
-            currentLevelNumber = tempLevelsMenu.selectedLevel;
+            currentLevelNumber = tempLevelsMenu.SelectedLevel;
 
             level_Selection();
         }
@@ -176,16 +206,16 @@ namespace GAME
         {
             switch (currentLevelNumber)
             {
-                case 1:
+                case Levels.L1:
                     currentLevel = new Level1();
                     break;
-                case 2:
+                case Levels.L2:
                     currentLevel = new Level2();
                     break;
-                case 3:
+                case Levels.L3:
                     currentLevel = new Level3();
                     break;
-                case 4:
+                case Levels.L4:
                     currentLevel = new Level4();
                     break;
                 //case 5:
@@ -230,73 +260,13 @@ namespace GAME
             }
 
         }
-
-        #region Quản lý gợi ý
-        private void btn_Suggestion_MouseHover(object sender, EventArgs e)
-        {
-            btn_Suggestion.Image = Properties.Resources.suggestion;
-        }
-
-        private void btn_Suggestion_MouseLeave(object sender, EventArgs e)
-        {
-            btn_Suggestion.Image = Properties.Resources.suggestion_nonActive1;
-        }
-
-        private void btn_Suggestion_Click(object sender, EventArgs e)
-        {
-            suggestionTable.Show();
-        }
-
-        /// <summary>
-        /// Trừ điểm khi chọn gợi ý
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void suggestionTable_PayToSuggestion(object sender, EventArgs e)
-        {
-            if (point >= 5)
-            {
-                point -= 5;
-
-                suggestionTable.panel_SuggestionText_Show();
-            }
-            else
-            {
-                notificationTimer.Start();
-            }
-        }
-
-        /// <summary>
-        /// Hiệu ứng làm mờ
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void notificationTimer_Tick(object sender, EventArgs e)
-        {
-            //label_Notification.Location.Y += 3;
-        }
-        #endregion
-
-        #endregion
-
-        #region Quản lý LevelsMenu
-        //  Mở table màn chơi
-        private void LevelsMenu_Open()
-        {
-            levelsMenu.Show();
-        }
-
-        //  Đóng table màn chơi
-        private void LevelsMenu_Close()
-        {
-            levelsMenu.Hide();
-        }
         #endregion
 
         #region Quản lý bảng HallOfFame
         private void HallOfFame_Open()
         {
             hallOfFame.Show();
+            currentLevel.Enabled = false;
         }
 
         private void HallOfFame_Close()
@@ -354,5 +324,89 @@ namespace GAME
         }
         #endregion
 
+        #region Quản lý SuggestionTable
+
+        private void Suggestion_Open()
+        {
+            suggestionTable.Show();
+            currentLevel.Enabled = false;
+            btn_Suggestion.Enabled = false;
+        }
+
+        private void Suggestion_Close()
+        {
+            suggestionTable.Hide();
+            currentLevel.Enabled = true;
+            btn_Suggestion.Enabled = true;
+        }
+
+        private void btn_Suggestion_MouseHover(object sender, EventArgs e)
+        {
+            btn_Suggestion.Image = Properties.Resources.suggestion;
+        }
+
+        private void btn_Suggestion_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Suggestion.Image = Properties.Resources.suggestion_nonActive1;
+        }
+
+        private void btn_Suggestion_Click(object sender, EventArgs e)
+        {
+            Suggestion_Open();
+        }
+
+        /// <summary>
+        /// Trừ điểm khi chọn gợi ý
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void suggestionTable_PayToSuggestion(object sender, EventArgs e)
+        {
+            if (coin >= 5)
+            {
+                coin -= 5;
+                SetCoin();
+
+                suggestionTable.panel_SuggestionText_Show();
+            }
+            else
+            {
+                if (notificationTimer.Enabled)
+                    notificationTimer.Stop();
+
+                label_Notification.Show();
+                label_Notification.Location = new Point(456, 67);
+                notificationTimer.Start();
+            }
+        }
+
+        /// <summary>
+        /// Hiệu ứng làm mờ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void notificationTimer_Tick(object sender, EventArgs e)
+        {
+            if (label_Notification.Location.Y > -30)
+            {
+                Point location = label_Notification.Location;
+                location.Y -= 4;
+                label_Notification.Location = location;
+            }
+            else
+            {
+                notificationTimer.Stop();
+            }
+        }
+        #endregion
+    }
+
+    public enum Levels
+    {
+        L1 = 1,
+        L2,
+        L3,
+        L4,
+        L5
     }
 }
