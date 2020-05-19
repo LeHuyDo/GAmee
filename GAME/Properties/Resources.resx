@@ -196,8 +196,8 @@
   <data name="closed-door-with-border-silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closed-door-with-border-silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow-point-to-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-point-to-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stairs-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stairs-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="indent-decrease-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\indent-decrease-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,6 +234,9 @@
   </data>
   <data name="arrow-to-the-right-navigation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-to-the-right-navigation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cd-pirated-interface-symbol-for-piracy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cd-pirated-interface-symbol-for-piracy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="signpost-with-three-arrows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signpost-with-three-arrows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,6 +346,9 @@
   <data name="bNorth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bNorth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="desert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -448,6 +454,9 @@
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="charater4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\charater41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="suggestion_nonActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\suggestion_nonActive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -510,6 +519,9 @@
   </data>
   <data name="book-closed-with-black-cover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book-closed-with-black-cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="updown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\updown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bEast" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bEast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -634,8 +646,8 @@
   <data name="document-with-a-cup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-with-a-cup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="updown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\updown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="b4869abd6b3fb22cba3635dab74b6c87-700x394" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b4869abd6b3fb22cba3635dab74b6c87-700x394.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="signpost" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signpost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -676,8 +688,8 @@
   <data name="clipboard-variant-with-pencil-and-check-mark-variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clipboard-variant-with-pencil-and-check-mark-variant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stairs-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stairs-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="open-window-with-timer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open-window-with-timer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="strikethrough-font-variant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strikethrough-font-variant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -772,9 +784,6 @@
   <data name="garbage-can-with-recycling-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\garbage-can-with-recycling-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="b4869abd6b3fb22cba3635dab74b6c87-700x394" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b4869abd6b3fb22cba3635dab74b6c87-700x394.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="speech-balloon-outline-with-exclamation-mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speech-balloon-outline-with-exclamation-mark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -783,6 +792,12 @@
   </data>
   <data name="check-mark-black-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check-mark-black-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="speaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speaker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -867,9 +882,6 @@
   </data>
   <data name="navigate-up-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\navigate-up-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="window-networking-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\window-networking-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clipboard-paste-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clipboard-paste-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1042,17 +1054,14 @@
   <data name="compact-disc-variant-with-border" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compact-disc-variant-with-border.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="open-window-with-timer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\open-window-with-timer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cd-pirated-interface-symbol-for-piracy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cd-pirated-interface-symbol-for-piracy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="window-networking-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\window-networking-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="split-type-window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\split-type-window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow-point-to-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow-point-to-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bookmarks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookmarks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1077,6 +1086,9 @@
   </data>
   <data name="find-again-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find-again-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="document-footer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-footer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1195,7 +1207,7 @@
   <data name="zoom-out-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zoom-out-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="desert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\desert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="charater2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\charater2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

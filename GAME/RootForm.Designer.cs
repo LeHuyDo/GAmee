@@ -50,10 +50,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.ticketTimer = new System.Windows.Forms.Timer(this.components);
-            this.heartBar = new GAME.HeartBar();
             this.btn_Suggestion = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.informationTable = new GAME.Information();
+            this.howToPlayTable = new GAME.HowToPlay();
             this.mainMenu = new GAME.MainMenu();
+            this.heartBar = new GAME.HeartBar();
             this.levelsMenu = new GAME.LevelsMenu();
             this.suggestionTable = new GAME.SuggestionTable();
             this.hallOfFame = new GAME.HallOfFame();
@@ -215,6 +217,7 @@
             this.btn_Information.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Information.Textcolor = System.Drawing.Color.White;
             this.btn_Information.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Information.Click += new System.EventHandler(this.btn_Information_Click);
             // 
             // btn_LevelMenu
             // 
@@ -276,6 +279,7 @@
             this.btn_HowToPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_HowToPlay.Textcolor = System.Drawing.Color.DeepSkyBlue;
             this.btn_HowToPlay.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HowToPlay.Click += new System.EventHandler(this.btn_HowToPlay_Click);
             // 
             // btn_Sound
             // 
@@ -306,6 +310,7 @@
             this.btn_Sound.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sound.Textcolor = System.Drawing.Color.Olive;
             this.btn_Sound.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sound.Click += new System.EventHandler(this.btn_Sound_Click);
             // 
             // bunifuDragControl1
             // 
@@ -351,12 +356,6 @@
             this.ticketTimer.Interval = 33;
             this.ticketTimer.Tick += new System.EventHandler(this.ticketTimer_Tick);
             // 
-            // heartBar
-            // 
-            this.heartBar.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.heartBar, "heartBar");
-            this.heartBar.Name = "heartBar";
-            // 
             // btn_Suggestion
             // 
             this.btn_Suggestion.BackColor = System.Drawing.Color.Transparent;
@@ -375,6 +374,16 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // informationTable
+            // 
+            resources.ApplyResources(this.informationTable, "informationTable");
+            this.informationTable.Name = "informationTable";
+            // 
+            // howToPlayTable
+            // 
+            resources.ApplyResources(this.howToPlayTable, "howToPlayTable");
+            this.howToPlayTable.Name = "howToPlayTable";
+            // 
             // mainMenu
             // 
             this.mainMenu.BackColor = System.Drawing.Color.Maroon;
@@ -383,6 +392,12 @@
             this.mainMenu.ChoiluonButtonClick += new System.EventHandler(this.mainMenu_ChoiluonButtonClick);
             this.mainMenu.ChoitiepButtonClick += new System.EventHandler(this.mainMenu_ChoitiepButtonClick);
             this.mainMenu.CachchoiButtonClick += new System.EventHandler(this.mainMenu_CachchoiButtonClick);
+            // 
+            // heartBar
+            // 
+            this.heartBar.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.heartBar, "heartBar");
+            this.heartBar.Name = "heartBar";
             // 
             // levelsMenu
             // 
@@ -423,6 +438,8 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+            this.Controls.Add(this.informationTable);
+            this.Controls.Add(this.howToPlayTable);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.mainMenu);
             this.Controls.Add(this.panel_Ticket);
@@ -481,6 +498,8 @@
         private SuggestionTable suggestionTable;
         private HallOfFame hallOfFame;
         private ContinueSelection continueSelection;
+        private HowToPlay howToPlayTable;
+        private Information informationTable;
     }
 }
 

@@ -813,6 +813,26 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c1 {
+            get {
+                object obj = ResourceManager.GetObject("c1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap c2 {
+            get {
+                object obj = ResourceManager.GetObject("c2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calibration_mark {
             get {
                 object obj = ResourceManager.GetObject("calibration-mark", resourceCulture);
@@ -896,6 +916,26 @@ namespace GAME.Properties {
         internal static System.Drawing.Bitmap cd_with_open_window {
             get {
                 object obj = ResourceManager.GetObject("cd-with-open-window", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap charater2 {
+            get {
+                object obj = ResourceManager.GetObject("charater2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap charater4 {
+            get {
+                object obj = ResourceManager.GetObject("charater4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

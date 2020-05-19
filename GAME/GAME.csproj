@@ -81,6 +81,18 @@
     <Compile Include="HeartBar.Designer.cs">
       <DependentUpon>HeartBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="HowToPlay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HowToPlay.Designer.cs">
+      <DependentUpon>HowToPlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="IPrefabLevel.cs" />
     <Compile Include="Level1.cs">
       <SubType>UserControl</SubType>
@@ -146,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeartBar.resx">
       <DependentUpon>HeartBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowToPlay.resx">
+      <DependentUpon>HowToPlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Level1.resx">
       <DependentUpon>Level1.cs</DependentUpon>
@@ -1278,6 +1296,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\desert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charater41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charater2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

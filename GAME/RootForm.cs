@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace GAME
 {
@@ -29,6 +30,9 @@ namespace GAME
 
         ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
 
+        SoundPlayer backgroundMusic = new SoundPlayer();
+        private bool isPlayingBackgroundMusic = false;
+
         public RootForm()
         {
             InitializeComponent();
@@ -47,10 +51,26 @@ namespace GAME
 
             SetCoin();
 
+            SetMusic_MainMenu();
+
             levelsStatus.Add(Levels.L1, true);
             levelsStatus.Add(Levels.L2, false);
             levelsStatus.Add(Levels.L3, false);
             levelsStatus.Add(Levels.L4, false);
+        }
+
+        private void PlayPause_BackgroundMusic()
+        {
+            if (isPlayingBackgroundMusic)
+            {
+                backgroundMusic.Stop();
+                isPlayingBackgroundMusic = false;
+            }
+            else
+            {
+                backgroundMusic.PlayLooping();
+                isPlayingBackgroundMusic = true;
+            }
         }
 
         #region Quản lý Toolbar
@@ -106,6 +126,21 @@ namespace GAME
             }
         }
 
+        private void btn_Sound_Click(object sender, EventArgs e)
+        {
+            PlayPause_BackgroundMusic();
+        }
+
+        private void btn_HowToPlay_Click(object sender, EventArgs e)
+        {
+            HowToPlayTable_Open();
+        }
+
+        private void btn_Information_Click(object sender, EventArgs e)
+        {
+            InformationTable_Open();
+        }
+
         private void btn_Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -134,18 +169,24 @@ namespace GAME
 
         private void mainMenu_ChoitiepButtonClick(object sender, EventArgs e)
         {
+            mainMenu.Hide();
 
+            ToolbarOpen();
+            LevelsMenu_Open();
         }
 
         private void mainMenu_CachchoiButtonClick(object sender, EventArgs e)
         {
-
+            HowToPlayTable_Open();
         }
 
         private void btn_LevelMenu_Click(object sender, EventArgs e)
         {
+            SetMusic_MainMenu();
+
             ToolbarOpen();
             LevelsMenu_Open();
+
             //  ContinueSelection vẫn hiện
             try
             {
@@ -158,6 +199,12 @@ namespace GAME
             }
 
             btn_Menu_Click(sender, e);
+        }
+
+        private void SetMusic_MainMenu()
+        {
+            backgroundMusic.SoundLocation = "sfx_1.wav";
+            backgroundMusic.PlayLooping();
         }
         #endregion
 
@@ -202,6 +249,7 @@ namespace GAME
         {
             LevelsMenu tempLevelsMenu = (LevelsMenu)sender;
             currentLevelEnum = tempLevelsMenu.SelectedLevel;
+            SetMusic_InGame();
 
             level_Selection();
         }
@@ -274,20 +322,26 @@ namespace GAME
             {
                 if (isFound)
                 {
-                    if (levelsStatus[item.Key] ==  false)
+                    if (levelsStatus[item.Key] == false)
                     {
                         levelsStatus[item.Key] = true;
 
                         coin += 2;
                         SetCoin();
                     }
-                    
+
                     break;
                 }
 
                 if (item.Key == currentLevelEnum)
                     isFound = true;
             }
+        }
+
+        private void SetMusic_InGame()
+        {
+            backgroundMusic.SoundLocation = "sfx_2.wav";
+            backgroundMusic.PlayLooping();
         }
         #endregion
 
@@ -306,6 +360,8 @@ namespace GAME
 
         private void hallOfFame_LevelMenuOpen(object sender, EventArgs e)
         {
+            SetMusic_MainMenu();
+
             Controls.Remove(currentLevel);
             HallOfFame_Close();
             LevelsMenu_Open();
@@ -357,27 +413,39 @@ namespace GAME
 
         private void continueSelection_LevelMenuOpen(object sender, EventArgs e)
         {
+            SetMusic_MainMenu();
+
             Controls.Remove(currentLevel);
             ContinueSelection_Close();
 
-            foreach (var item in levelsStatus)
-                levelsStatus[item.Key] = false;
-            
+            Reset_Game();
+
             LevelsMenu_Open();
         }
 
         private void continueSelection_PlayAgain(object sender, EventArgs e)
         {
             ContinueSelection_Close();
-
-            foreach (var item in levelsStatus)
-                levelsStatus[Levels.L1] = false;
-
-            levelsStatus[Levels.L1] = true;
+            Reset_Game();
 
             Controls.Remove(currentLevel);
             currentLevelEnum = Levels.L1;
             level_Selection();
+        }
+
+        private void Reset_Game()
+        {
+            List<Levels> keys = levelsStatus.Keys.ToList();
+            foreach (var item in keys)
+                levelsStatus[item] = false;
+
+            levelsStatus[Levels.L1] = true;
+
+            coin = 10;
+            SetCoin();
+
+            numberOfLife = 5;
+            heartBar.SetHearts(numberOfLife);
         }
         #endregion
 
@@ -406,7 +474,6 @@ namespace GAME
 
         private void btn_Suggestion_Click(object sender, EventArgs e)
         {
-            //Suggestion_Open();
             if (panel_Ticket.Visible)
                 isTicketShow = true;
             else
@@ -494,6 +561,61 @@ namespace GAME
                 notificationTimer.Stop();
             }
         }
+        #endregion
+
+        #region Quản lý HowToPlayTable
+
+        private void HowToPlayTable_Open()
+        {
+            howToPlayTable.Location = new Point(115, 180);
+            howToPlayTable.Show();
+
+            if (currentLevel != null)
+                currentLevel.Enabled = false;
+
+            mainMenu.Enabled = false;
+            levelsMenu.Enabled = false;
+            menuPanel.Enabled = false;
+        }
+
+        private void HowToPlayTable_Close()
+        {
+            howToPlayTable.Hide();
+
+            if (currentLevel != null)
+                currentLevel.Enabled = true;
+
+            mainMenu.Enabled = true;
+            levelsMenu.Enabled = true;
+            menuPanel.Enabled = true;
+        }
+        #endregion
+
+        #region Quản lý InformationTable
+
+        private void InformationTable_Open()
+        {
+            informationTable.Location = new Point(115, 180);
+            informationTable.Show();
+
+            if (currentLevel != null)
+                currentLevel.Enabled = false;
+
+            levelsMenu.Enabled = false;
+            menuPanel.Enabled = false;
+        }
+
+        private void InformationTable_Close()
+        {
+            informationTable.Hide();
+
+            if (currentLevel != null)
+                currentLevel.Enabled = true;
+
+            levelsMenu.Enabled = true;
+            menuPanel.Enabled = true;
+        }
+        #endregion
 
         /// <summary>
         /// Đóng UserControl khi click ra ngoài
@@ -505,9 +627,13 @@ namespace GAME
 
             if (suggestionTable.Visible)
                 Suggestion_Close();
-        }
-        #endregion
 
+            if (informationTable.Visible)
+                InformationTable_Close();
+
+            if (howToPlayTable.Visible)
+                HowToPlayTable_Close();
+        }
     }
 
     public enum Levels
