@@ -31,5 +31,11 @@ namespace GAME
         {
             RightAnswer(EventArgs.Empty);
         }
+
+        private void Level3_Load(object sender, EventArgs e)
+        {
+            suggestionText = "Chú ý hướng kim la bàn đang chỉ.";
+            answerText = "Trên màn hình rõ ràng la bàn đang chỉ nút West đúng không :)";
+        }
     }
 }

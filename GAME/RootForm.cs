@@ -57,6 +57,10 @@ namespace GAME
             levelsStatus.Add(Levels.L2, false);
             levelsStatus.Add(Levels.L3, false);
             levelsStatus.Add(Levels.L4, false);
+            levelsStatus.Add(Levels.L5, false);
+            levelsStatus.Add(Levels.L6, false);
+            levelsStatus.Add(Levels.L7, false);
+            levelsStatus.Add(Levels.L8, false);
         }
 
         private void PlayPause_BackgroundMusic()
@@ -270,12 +274,18 @@ namespace GAME
                 case Levels.L4:
                     currentLevel = new Level4();
                     break;
-                //case 5:
-                //    currentLevel = new Level5();
-                //    break;
-                //case 6:
-                //    currentLevel = new Level6();
-                //    break;
+                case Levels.L5:
+                    currentLevel = new Level5();
+                    break;
+                case Levels.L6:
+                    currentLevel = new Level6();
+                    break;
+                case Levels.L7:
+                    currentLevel = new Level7();
+                    break;
+                case Levels.L8:
+                    currentLevel = new Level8();
+                    break;
 
                 default:
                     break;
@@ -642,6 +652,9 @@ namespace GAME
         L2,
         L3,
         L4,
-        L5
+        L5, 
+        L6, 
+        L7, 
+        L8
     }
 }

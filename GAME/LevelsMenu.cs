@@ -73,6 +73,27 @@ namespace GAME
 
                     break;
 
+                case Levels.L6:
+                    btn_Level6.Enabled = isActive;
+                    btn_Level6.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level6.Checked = isActive;
+
+                    break;
+
+                case Levels.L7:
+                    btn_Level7.Enabled = isActive;
+                    btn_Level7.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level7.Checked = isActive;
+
+                    break;
+
+                case Levels.L8:
+                    btn_Level8.Enabled = isActive;
+                    btn_Level8.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level8.Checked = isActive;
+
+                    break;
+
                 default:
                     break;
             }

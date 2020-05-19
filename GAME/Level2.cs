@@ -21,7 +21,8 @@ namespace GAME
 
         private void Level2_Load(object sender, EventArgs e)
         {
-            //suggestionText = "Màu xanh lục có thể pha từ màu gì nhỉ ??!";
+            suggestionText = "Màu xanh lục có thể pha từ màu gì nhỉ ??!";
+            answerText = "Nước đi hay lắm !";
 
             ControlExtension.Draggable(picture_RedPencil, true);
             ControlExtension.Draggable(picture_BluePencil, true);

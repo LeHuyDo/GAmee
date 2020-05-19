@@ -63,9 +63,29 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_button_with_plus_symbol_in_a_black_circle {
             get {
                 object obj = ResourceManager.GetObject("add-button-with-plus-symbol-in-a-black-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arr {
+            get {
+                object obj = ResourceManager.GetObject("arr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -826,6 +846,26 @@ namespace GAME.Properties {
         internal static System.Drawing.Bitmap c2 {
             get {
                 object obj = ResourceManager.GetObject("c2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cake1 {
+            get {
+                object obj = ResourceManager.GetObject("cake1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cake2 {
+            get {
+                object obj = ResourceManager.GetObject("cake2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2623,6 +2663,16 @@ namespace GAME.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap object_27 {
+            get {
+                object obj = ResourceManager.GetObject("object_27", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap object_3 {
             get {
                 object obj = ResourceManager.GetObject("object_3", resourceCulture);
@@ -2676,6 +2726,26 @@ namespace GAME.Properties {
         internal static System.Drawing.Bitmap object_9 {
             get {
                 object obj = ResourceManager.GetObject("object_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok {
+            get {
+                object obj = ResourceManager.GetObject("ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok1 {
+            get {
+                object obj = ResourceManager.GetObject("ok1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3248,6 +3318,16 @@ namespace GAME.Properties {
         internal static System.Drawing.Bitmap strikethrough_font_variant {
             get {
                 object obj = ResourceManager.GetObject("strikethrough-font-variant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sub {
+            get {
+                object obj = ResourceManager.GetObject("sub", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

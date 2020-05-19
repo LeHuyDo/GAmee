@@ -133,6 +133,7 @@
             this.Controls.Add(this.label_Level1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Level3";
+            this.Load += new System.EventHandler(this.Level3_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level3_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.btn_West)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_East)).EndInit();

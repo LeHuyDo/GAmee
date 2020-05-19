@@ -17,6 +17,12 @@ namespace GAME
             InitializeComponent();
         }
 
+        private void Level4_Load(object sender, EventArgs e)
+        {
+            suggestionText = "Tầng mà mọi người phải xuất hiện nhiều nhất ấy";
+            answerText = "Muốn đi thang máy lên chắc chắn phải qua tầng 1 (không tính tầng hầm nha :v)";
+        }
+
         private void RightAnswerHandle(object sender, EventArgs e)
         {
             RightAnswer(EventArgs.Empty);
@@ -26,5 +32,6 @@ namespace GAME
         {
             WrongAnswer(EventArgs.Empty);
         }
+
     }
 }

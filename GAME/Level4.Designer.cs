@@ -48,15 +48,14 @@
             // label_Level1
             // 
             this.label_Level1.BackColor = System.Drawing.Color.Transparent;
-            this.label_Level1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Level1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Level1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label_Level1.Location = new System.Drawing.Point(81, 33);
+            this.label_Level1.Location = new System.Drawing.Point(80, 122);
             this.label_Level1.Name = "label_Level1";
-            this.label_Level1.Size = new System.Drawing.Size(541, 221);
+            this.label_Level1.Size = new System.Drawing.Size(558, 221);
             this.label_Level1.TabIndex = 5;
-            this.label_Level1.Text = "Chung cư có 14 người, 3 người ở tầng năm, tầng ba,\r\n4 người ở tầng hai, tầng bốn." +
-    " Sau đó có hai người dọn tới tầng ba.\r\nVậy thang máy được sử dụng nhiều nhất ở t" +
-    "ầng:";
+            this.label_Level1.Text = "Có 5 tầng trong tòa nhà này. 2 người sống ở tâng 1, 5 người sống ở tầng 2, 3 tầng" +
+    " trên đều có 4 người sống.\r\nVậy tầng nào thang máy đi qua nhiều nhất ?";
             this.label_Level1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_Level1.Click += new System.EventHandler(this.WrongAnswerHandle);
             // 
@@ -65,7 +64,7 @@
             this.btn_Number5.BackColor = System.Drawing.Color.Transparent;
             this.btn_Number5.Image = global::GAME.Properties.Resources.b5;
             this.btn_Number5.ImageActive = null;
-            this.btn_Number5.Location = new System.Drawing.Point(394, 700);
+            this.btn_Number5.Location = new System.Drawing.Point(392, 774);
             this.btn_Number5.Name = "btn_Number5";
             this.btn_Number5.Size = new System.Drawing.Size(135, 58);
             this.btn_Number5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,7 +78,7 @@
             this.btn_Number4.BackColor = System.Drawing.Color.Transparent;
             this.btn_Number4.Image = global::GAME.Properties.Resources.b4;
             this.btn_Number4.ImageActive = null;
-            this.btn_Number4.Location = new System.Drawing.Point(175, 700);
+            this.btn_Number4.Location = new System.Drawing.Point(173, 774);
             this.btn_Number4.Name = "btn_Number4";
             this.btn_Number4.Size = new System.Drawing.Size(135, 58);
             this.btn_Number4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -93,7 +92,7 @@
             this.btn_Number3.BackColor = System.Drawing.Color.Transparent;
             this.btn_Number3.Image = global::GAME.Properties.Resources.b3;
             this.btn_Number3.ImageActive = null;
-            this.btn_Number3.Location = new System.Drawing.Point(476, 579);
+            this.btn_Number3.Location = new System.Drawing.Point(474, 653);
             this.btn_Number3.Name = "btn_Number3";
             this.btn_Number3.Size = new System.Drawing.Size(135, 58);
             this.btn_Number3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -107,7 +106,7 @@
             this.btn_Number2.BackColor = System.Drawing.Color.Transparent;
             this.btn_Number2.Image = global::GAME.Properties.Resources.b2;
             this.btn_Number2.ImageActive = null;
-            this.btn_Number2.Location = new System.Drawing.Point(288, 579);
+            this.btn_Number2.Location = new System.Drawing.Point(286, 653);
             this.btn_Number2.Name = "btn_Number2";
             this.btn_Number2.Size = new System.Drawing.Size(135, 58);
             this.btn_Number2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -121,7 +120,7 @@
             this.btn_Number1.BackColor = System.Drawing.Color.Transparent;
             this.btn_Number1.Image = global::GAME.Properties.Resources.b1;
             this.btn_Number1.ImageActive = null;
-            this.btn_Number1.Location = new System.Drawing.Point(97, 579);
+            this.btn_Number1.Location = new System.Drawing.Point(95, 653);
             this.btn_Number1.Name = "btn_Number1";
             this.btn_Number1.Size = new System.Drawing.Size(135, 58);
             this.btn_Number1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +132,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GAME.Properties.Resources.updown;
-            this.pictureBox2.Location = new System.Drawing.Point(454, 287);
+            this.pictureBox2.Location = new System.Drawing.Point(454, 386);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 161);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +143,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GAME.Properties.Resources.elevator;
-            this.pictureBox1.Location = new System.Drawing.Point(242, 238);
+            this.pictureBox1.Location = new System.Drawing.Point(242, 346);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(206, 227);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,6 +165,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_Level1);
             this.Name = "Level4";
+            this.Load += new System.EventHandler(this.Level4_Load);
             this.Click += new System.EventHandler(this.WrongAnswerHandle);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Number5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Number4)).EndInit();

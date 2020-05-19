@@ -118,6 +118,30 @@
     <Compile Include="Level4.Designer.cs">
       <DependentUpon>Level4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Level5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Level5.Designer.cs">
+      <DependentUpon>Level5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Level6.Designer.cs">
+      <DependentUpon>Level6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Level7.Designer.cs">
+      <DependentUpon>Level7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Level8.Designer.cs">
+      <DependentUpon>Level8.cs</DependentUpon>
+    </Compile>
     <Compile Include="LevelsMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +200,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Level4.resx">
       <DependentUpon>Level4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level5.resx">
+      <DependentUpon>Level5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level6.resx">
+      <DependentUpon>Level6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level7.resx">
+      <DependentUpon>Level7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level8.resx">
+      <DependentUpon>Level8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LevelsMenu.resx">
       <DependentUpon>LevelsMenu.cs</DependentUpon>
@@ -1308,6 +1344,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\charater2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
