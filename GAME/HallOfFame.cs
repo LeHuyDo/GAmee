@@ -27,6 +27,11 @@ namespace GAME
             levelLabel.Text = "Màn " + currentLevel.ToString();
         }
 
+        public void SetAnswerText(string text)
+        {
+            label_Answer.Text = text;
+        }
+
         #region Thêm một số HandleEvent
         [Browsable(true)]
         [Category("CustomAction")]
@@ -43,7 +48,7 @@ namespace GAME
         [Description("PlayAgain")]
         public event EventHandler PlayAgain;
 
-        private void btn_LevelMenuOpen_Click(object sender, EventArgs e)
+        private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
             PlayAgain?.Invoke(sender, e);
         }
@@ -53,7 +58,7 @@ namespace GAME
         [Description("LevelMenuOpen")]
         public event EventHandler LevelMenuOpen;
 
-        private void btn_PlayAgain_Click(object sender, EventArgs e)
+        private void btn_LevelMenuOpen_Click(object sender, EventArgs e)
         {
             LevelMenuOpen?.Invoke(sender, e);
         }

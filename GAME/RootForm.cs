@@ -11,8 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace GAME
 {
     public partial class RootForm : Form
@@ -20,13 +18,14 @@ namespace GAME
         private PrefabLevel currentLevel;
         private Levels currentLevelEnum = Levels.L1;
 
-        //  Tình trạng từng màn chơi (qua màn/chưa qua)
+        //  Tình trạng của từng màn chơi (qua màn/chưa qua)
         private Dictionary<Levels, bool> levelsStatus = new Dictionary<Levels, bool>();
 
         private int numberOfLife = 5;
-        private int coin = 5;
+        private int coin = 10;
 
         private bool isMenuShow = false;
+        private bool isTicketShow = false;
 
         ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
 
@@ -179,7 +178,7 @@ namespace GAME
         private void RightAnswer(object sender, EventArgs e)
         {
             hallOfFame.SetLevelLabel(currentLevelEnum);
-            hallOfFame.Show();
+            HallOfFame_Open();
 
             SetNextLevelActive();
         }
@@ -187,6 +186,7 @@ namespace GAME
         private void WrongAnswer(object sender, EventArgs e)
         {
             numberOfLife--;
+
             heartBar.SetHearts(numberOfLife);
 
             Controls.Remove(currentLevel);
@@ -255,8 +255,7 @@ namespace GAME
                 currentLevel.rightAnswer += new EventHandler(RightAnswer);
                 currentLevel.wrongAnswer += new EventHandler(WrongAnswer);
 
-                //  Cài đặt gợi ý cho suggestionTable
-                suggestionTable.SetSuggestionText(currentLevel.SuggestionText);
+                TextInput(currentLevel);
             }
             catch (Exception ex)
             {
@@ -264,6 +263,9 @@ namespace GAME
             }
         }
 
+        /// <summary>
+        /// Mở khóa màn tiếp theo, cộng coin khi qua màn lần đầu
+        /// </summary>
         private void SetNextLevelActive()
         {
             bool isFound = false;
@@ -272,7 +274,14 @@ namespace GAME
             {
                 if (isFound)
                 {
-                    levelsStatus[item.Key] = true;
+                    if (levelsStatus[item.Key] ==  false)
+                    {
+                        levelsStatus[item.Key] = true;
+
+                        coin += 2;
+                        SetCoin();
+                    }
+                    
                     break;
                 }
 
@@ -285,6 +294,7 @@ namespace GAME
         #region Quản lý bảng HallOfFame
         private void HallOfFame_Open()
         {
+            hallOfFame.Location = new Point(90, 200);
             hallOfFame.Show();
             currentLevel.Enabled = false;
         }
@@ -296,6 +306,7 @@ namespace GAME
 
         private void hallOfFame_LevelMenuOpen(object sender, EventArgs e)
         {
+            Controls.Remove(currentLevel);
             HallOfFame_Close();
             LevelsMenu_Open();
         }
@@ -334,6 +345,7 @@ namespace GAME
         #region Quản lý ContinueSelection
         private void ContinueSelection_Open()
         {
+            continueSelection.Location = new Point(90, 200);
             continueSelection.Show();
             currentLevel.Enabled = false;
         }
@@ -342,12 +354,38 @@ namespace GAME
         {
             continueSelection.Hide();
         }
+
+        private void continueSelection_LevelMenuOpen(object sender, EventArgs e)
+        {
+            Controls.Remove(currentLevel);
+            ContinueSelection_Close();
+
+            foreach (var item in levelsStatus)
+                levelsStatus[item.Key] = false;
+            
+            LevelsMenu_Open();
+        }
+
+        private void continueSelection_PlayAgain(object sender, EventArgs e)
+        {
+            ContinueSelection_Close();
+
+            foreach (var item in levelsStatus)
+                levelsStatus[Levels.L1] = false;
+
+            levelsStatus[Levels.L1] = true;
+
+            Controls.Remove(currentLevel);
+            currentLevelEnum = Levels.L1;
+            level_Selection();
+        }
         #endregion
 
         #region Quản lý SuggestionTable
 
         private void Suggestion_Open()
         {
+            suggestionTable.Location = new Point(115, 220);
             suggestionTable.Show();
             currentLevel.Enabled = false;
             btn_Suggestion.Enabled = false;
@@ -360,20 +398,54 @@ namespace GAME
             btn_Suggestion.Enabled = true;
         }
 
-        private void btn_Suggestion_MouseHover(object sender, EventArgs e)
+        private void TextInput(PrefabLevel level)
         {
-            btn_Suggestion.Image = Properties.Resources.suggestion;
-        }
-
-        private void btn_Suggestion_MouseLeave(object sender, EventArgs e)
-        {
-            btn_Suggestion.Image = Properties.Resources.suggestion_nonActive1;
+            suggestionTable.SetSuggestionText(level.SuggestionText);
+            hallOfFame.SetAnswerText(level.AnwserText);
         }
 
         private void btn_Suggestion_Click(object sender, EventArgs e)
         {
-            Suggestion_Open();
+            //Suggestion_Open();
+            if (panel_Ticket.Visible)
+                isTicketShow = true;
+            else
+            {
+                panel_Ticket.Show();
+                isTicketShow = false;
+            }
+
+            ticketTimer.Start();
         }
+
+        private void ticketTimer_Tick(object sender, EventArgs e)
+        {
+            if (isTicketShow)
+            {
+                panel_Ticket.Height -= 10;
+
+                if (panel_Ticket.Height <= 0)
+                {
+                    panel_Ticket.Hide();
+                    ticketTimer.Stop();
+                }
+            }
+
+            else
+            {
+                panel_Ticket.Height += 10;
+
+                if (panel_Ticket.Height >= 110)
+                    ticketTimer.Stop();
+            }
+        }
+
+        private void pictureTicket_Click(object sender, EventArgs e)
+        {
+            btn_Suggestion_Click(sender, e);
+            suggestionTable_PayToSuggestion(sender, e);
+        }
+
 
         /// <summary>
         /// Trừ điểm khi chọn gợi ý
@@ -384,10 +456,14 @@ namespace GAME
         {
             if (coin >= 5)
             {
-                coin -= 5;
-                SetCoin();
+                if (currentLevel.IsBuySuggestion == false)
+                {
+                    coin -= 5;
+                    SetCoin();
+                    currentLevel.IsBuySuggestion = true;
+                }
 
-                suggestionTable.panel_SuggestionText_Show();
+                Suggestion_Open();
             }
             else
             {
@@ -395,7 +471,7 @@ namespace GAME
                     notificationTimer.Stop();
 
                 label_Notification.Show();
-                label_Notification.Location = new Point(456, 67);
+                label_Notification.Location = new Point(456, 120);
                 notificationTimer.Start();
             }
         }
@@ -418,12 +494,25 @@ namespace GAME
                 notificationTimer.Stop();
             }
         }
+
+        /// <summary>
+        /// Đóng UserControl khi click ra ngoài
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
+
+            if (suggestionTable.Visible)
+                Suggestion_Close();
+        }
         #endregion
+
     }
 
     public enum Levels
     {
-        L1 = 1,
+        L1,
         L2,
         L3,
         L4,

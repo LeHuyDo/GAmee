@@ -33,8 +33,6 @@
             this.toolBar = new System.Windows.Forms.Panel();
             this.btn_CoinLabel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Menu = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.btn_Size = new FontAwesome.Sharp.IconButton();
             this.btn_Close = new FontAwesome.Sharp.IconButton();
@@ -48,17 +46,25 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label_Notification = new System.Windows.Forms.Label();
             this.notificationTimer = new System.Windows.Forms.Timer(this.components);
-            this.btn_Suggestion = new Bunifu.Framework.UI.BunifuImageButton();
-            this.suggestionTable = new GAME.SuggestionTable();
+            this.panel_Ticket = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.ticketTimer = new System.Windows.Forms.Timer(this.components);
             this.heartBar = new GAME.HeartBar();
-            this.levelsMenu = new GAME.LevelsMenu();
-            this.continueSelection = new GAME.ContinueSelection();
-            this.hallOfFame = new GAME.HallOfFame();
+            this.btn_Suggestion = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainMenu = new GAME.MainMenu();
+            this.levelsMenu = new GAME.LevelsMenu();
+            this.suggestionTable = new GAME.SuggestionTable();
+            this.hallOfFame = new GAME.HallOfFame();
+            this.continueSelection = new GAME.ContinueSelection();
             this.toolBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
             this.menuPanel.SuspendLayout();
+            this.panel_Ticket.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Suggestion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolBar
@@ -66,8 +72,6 @@
             this.toolBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(52)))), ((int)(((byte)(71)))));
             this.toolBar.Controls.Add(this.btn_CoinLabel);
             this.toolBar.Controls.Add(this.btn_Menu);
-            this.toolBar.Controls.Add(this.bunifuGradientPanel2);
-            this.toolBar.Controls.Add(this.bunifuGradientPanel1);
             this.toolBar.Controls.Add(this.btn_Minimize);
             this.toolBar.Controls.Add(this.btn_Size);
             this.toolBar.Controls.Add(this.btn_Close);
@@ -114,26 +118,6 @@
             this.btn_Menu.TabStop = false;
             this.btn_Menu.Zoom = 10;
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
-            // 
-            // bunifuGradientPanel2
-            // 
-            resources.ApplyResources(this.bunifuGradientPanel2, "bunifuGradientPanel2");
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            // 
-            // bunifuGradientPanel1
-            // 
-            resources.ApplyResources(this.bunifuGradientPanel1, "bunifuGradientPanel1");
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
             // 
             // btn_Minimize
             // 
@@ -204,15 +188,15 @@
             // 
             // btn_Information
             // 
-            this.btn_Information.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Information.Activecolor = System.Drawing.Color.OliveDrab;
             resources.ApplyResources(this.btn_Information, "btn_Information");
-            this.btn_Information.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Information.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Information.BorderRadius = 0;
             this.btn_Information.ButtonText = "Thông tin trò chơi";
             this.btn_Information.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Information.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Information.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Information.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Information.Iconimage")));
+            this.btn_Information.Iconimage = global::GAME.Properties.Resources.info;
             this.btn_Information.Iconimage_right = null;
             this.btn_Information.Iconimage_right_Selected = null;
             this.btn_Information.Iconimage_Selected = null;
@@ -221,11 +205,11 @@
             this.btn_Information.IconRightVisible = true;
             this.btn_Information.IconRightZoom = 0D;
             this.btn_Information.IconVisible = true;
-            this.btn_Information.IconZoom = 90D;
+            this.btn_Information.IconZoom = 70D;
             this.btn_Information.IsTab = false;
             this.btn_Information.Name = "btn_Information";
-            this.btn_Information.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_Information.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_Information.Normalcolor = System.Drawing.Color.OliveDrab;
+            this.btn_Information.OnHovercolor = System.Drawing.Color.YellowGreen;
             this.btn_Information.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Information.selected = false;
             this.btn_Information.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,15 +218,15 @@
             // 
             // btn_LevelMenu
             // 
-            this.btn_LevelMenu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_LevelMenu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(83)))), ((int)(((byte)(104)))));
             resources.ApplyResources(this.btn_LevelMenu, "btn_LevelMenu");
-            this.btn_LevelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_LevelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(120)))), ((int)(((byte)(134)))));
             this.btn_LevelMenu.BorderRadius = 0;
             this.btn_LevelMenu.ButtonText = "Màn chơi";
             this.btn_LevelMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_LevelMenu.DisabledColor = System.Drawing.Color.Gray;
             this.btn_LevelMenu.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_LevelMenu.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_LevelMenu.Iconimage")));
+            this.btn_LevelMenu.Iconimage = global::GAME.Properties.Resources.menu1;
             this.btn_LevelMenu.Iconimage_right = null;
             this.btn_LevelMenu.Iconimage_right_Selected = null;
             this.btn_LevelMenu.Iconimage_Selected = null;
@@ -251,29 +235,29 @@
             this.btn_LevelMenu.IconRightVisible = true;
             this.btn_LevelMenu.IconRightZoom = 0D;
             this.btn_LevelMenu.IconVisible = true;
-            this.btn_LevelMenu.IconZoom = 90D;
+            this.btn_LevelMenu.IconZoom = 70D;
             this.btn_LevelMenu.IsTab = false;
             this.btn_LevelMenu.Name = "btn_LevelMenu";
-            this.btn_LevelMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_LevelMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_LevelMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(120)))), ((int)(((byte)(134)))));
+            this.btn_LevelMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
             this.btn_LevelMenu.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_LevelMenu.selected = false;
             this.btn_LevelMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LevelMenu.Textcolor = System.Drawing.Color.White;
-            this.btn_LevelMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LevelMenu.Textcolor = System.Drawing.Color.Gainsboro;
+            this.btn_LevelMenu.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LevelMenu.Click += new System.EventHandler(this.btn_LevelMenu_Click);
             // 
             // btn_HowToPlay
             // 
-            this.btn_HowToPlay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_HowToPlay.Activecolor = System.Drawing.Color.LightSteelBlue;
             resources.ApplyResources(this.btn_HowToPlay, "btn_HowToPlay");
-            this.btn_HowToPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_HowToPlay.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_HowToPlay.BorderRadius = 0;
             this.btn_HowToPlay.ButtonText = "Hướng dẫn";
             this.btn_HowToPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_HowToPlay.DisabledColor = System.Drawing.Color.Gray;
             this.btn_HowToPlay.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_HowToPlay.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_HowToPlay.Iconimage")));
+            this.btn_HowToPlay.Iconimage = global::GAME.Properties.Resources.questionMark;
             this.btn_HowToPlay.Iconimage_right = null;
             this.btn_HowToPlay.Iconimage_right_Selected = null;
             this.btn_HowToPlay.Iconimage_Selected = null;
@@ -282,20 +266,20 @@
             this.btn_HowToPlay.IconRightVisible = true;
             this.btn_HowToPlay.IconRightZoom = 0D;
             this.btn_HowToPlay.IconVisible = true;
-            this.btn_HowToPlay.IconZoom = 90D;
+            this.btn_HowToPlay.IconZoom = 70D;
             this.btn_HowToPlay.IsTab = false;
             this.btn_HowToPlay.Name = "btn_HowToPlay";
-            this.btn_HowToPlay.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_HowToPlay.Normalcolor = System.Drawing.Color.LightSteelBlue;
             this.btn_HowToPlay.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_HowToPlay.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_HowToPlay.OnHoverTextColor = System.Drawing.Color.SteelBlue;
             this.btn_HowToPlay.selected = false;
             this.btn_HowToPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HowToPlay.Textcolor = System.Drawing.Color.White;
-            this.btn_HowToPlay.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HowToPlay.Textcolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_HowToPlay.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Sound
             // 
-            this.btn_Sound.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Sound.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(151)))), ((int)(((byte)(85)))));
             resources.ApplyResources(this.btn_Sound, "btn_Sound");
             this.btn_Sound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_Sound.BorderRadius = 0;
@@ -303,7 +287,7 @@
             this.btn_Sound.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Sound.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Sound.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Sound.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Sound.Iconimage")));
+            this.btn_Sound.Iconimage = global::GAME.Properties.Resources.speaker;
             this.btn_Sound.Iconimage_right = null;
             this.btn_Sound.Iconimage_right_Selected = null;
             this.btn_Sound.Iconimage_Selected = null;
@@ -312,7 +296,7 @@
             this.btn_Sound.IconRightVisible = true;
             this.btn_Sound.IconRightZoom = 0D;
             this.btn_Sound.IconVisible = true;
-            this.btn_Sound.IconZoom = 90D;
+            this.btn_Sound.IconZoom = 70D;
             this.btn_Sound.IsTab = false;
             this.btn_Sound.Name = "btn_Sound";
             this.btn_Sound.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -320,8 +304,8 @@
             this.btn_Sound.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Sound.selected = false;
             this.btn_Sound.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sound.Textcolor = System.Drawing.Color.White;
-            this.btn_Sound.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sound.Textcolor = System.Drawing.Color.Olive;
+            this.btn_Sound.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuDragControl1
             // 
@@ -341,25 +325,31 @@
             this.notificationTimer.Interval = 33;
             this.notificationTimer.Tick += new System.EventHandler(this.notificationTimer_Tick);
             // 
-            // btn_Suggestion
+            // panel_Ticket
             // 
-            this.btn_Suggestion.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Suggestion.Image = global::GAME.Properties.Resources.suggestion_nonActive1;
-            this.btn_Suggestion.ImageActive = null;
-            resources.ApplyResources(this.btn_Suggestion, "btn_Suggestion");
-            this.btn_Suggestion.Name = "btn_Suggestion";
-            this.btn_Suggestion.TabStop = false;
-            this.btn_Suggestion.Zoom = 10;
-            this.btn_Suggestion.Click += new System.EventHandler(this.btn_Suggestion_Click);
-            this.btn_Suggestion.MouseLeave += new System.EventHandler(this.btn_Suggestion_MouseLeave);
-            this.btn_Suggestion.MouseHover += new System.EventHandler(this.btn_Suggestion_MouseHover);
+            this.panel_Ticket.Controls.Add(this.label1);
+            this.panel_Ticket.Controls.Add(this.pictureBox12);
+            resources.ApplyResources(this.panel_Ticket, "panel_Ticket");
+            this.panel_Ticket.Name = "panel_Ticket";
             // 
-            // suggestionTable
+            // label1
             // 
-            this.suggestionTable.BackColor = System.Drawing.Color.DimGray;
-            resources.ApplyResources(this.suggestionTable, "suggestionTable");
-            this.suggestionTable.Name = "suggestionTable";
-            this.suggestionTable.PayToSuggestion += new System.EventHandler(this.suggestionTable_PayToSuggestion);
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Name = "label1";
+            // 
+            // pictureBox12
+            // 
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.Image = global::GAME.Properties.Resources.ticket11;
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureTicket_Click);
+            // 
+            // ticketTimer
+            // 
+            this.ticketTimer.Interval = 33;
+            this.ticketTimer.Tick += new System.EventHandler(this.ticketTimer_Tick);
             // 
             // heartBar
             // 
@@ -367,28 +357,23 @@
             resources.ApplyResources(this.heartBar, "heartBar");
             this.heartBar.Name = "heartBar";
             // 
-            // levelsMenu
+            // btn_Suggestion
             // 
-            this.levelsMenu.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.levelsMenu, "levelsMenu");
-            this.levelsMenu.Name = "levelsMenu";
-            this.levelsMenu.Level_ButtonClick += new System.EventHandler(this.levelsMenu_Level_ButtonClick);
+            this.btn_Suggestion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Suggestion.Image = global::GAME.Properties.Resources.glass;
+            this.btn_Suggestion.ImageActive = null;
+            resources.ApplyResources(this.btn_Suggestion, "btn_Suggestion");
+            this.btn_Suggestion.Name = "btn_Suggestion";
+            this.btn_Suggestion.TabStop = false;
+            this.btn_Suggestion.Zoom = 6;
+            this.btn_Suggestion.Click += new System.EventHandler(this.btn_Suggestion_Click);
             // 
-            // continueSelection
+            // pictureBox1
             // 
-            this.continueSelection.BackColor = System.Drawing.Color.DimGray;
-            resources.ApplyResources(this.continueSelection, "continueSelection");
-            this.continueSelection.Name = "continueSelection";
-            // 
-            // hallOfFame
-            // 
-            this.hallOfFame.BackColor = System.Drawing.Color.DimGray;
-            resources.ApplyResources(this.hallOfFame, "hallOfFame");
-            this.hallOfFame.CurrentLevel = Levels.L1;
-            this.hallOfFame.Name = "hallOfFame";
-            this.hallOfFame.NextLevel += new System.EventHandler(this.hallOfFame_NextLevel);
-            this.hallOfFame.PlayAgain += new System.EventHandler(this.hallOfFame_PlayAgain);
-            this.hallOfFame.LevelMenuOpen += new System.EventHandler(this.hallOfFame_LevelMenuOpen);
+            this.pictureBox1.Image = global::GAME.Properties.Resources.ticket11;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // mainMenu
             // 
@@ -399,21 +384,56 @@
             this.mainMenu.ChoitiepButtonClick += new System.EventHandler(this.mainMenu_ChoitiepButtonClick);
             this.mainMenu.CachchoiButtonClick += new System.EventHandler(this.mainMenu_CachchoiButtonClick);
             // 
+            // levelsMenu
+            // 
+            this.levelsMenu.BackColor = System.Drawing.Color.Transparent;
+            this.levelsMenu.LevelsStatus = null;
+            resources.ApplyResources(this.levelsMenu, "levelsMenu");
+            this.levelsMenu.Name = "levelsMenu";
+            this.levelsMenu.SelectedLevel = GAME.Levels.L1;
+            this.levelsMenu.Level_ButtonClick += new System.EventHandler(this.levelsMenu_Level_ButtonClick);
+            // 
+            // suggestionTable
+            // 
+            this.suggestionTable.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.suggestionTable, "suggestionTable");
+            this.suggestionTable.Name = "suggestionTable";
+            this.suggestionTable.PayToSuggestion += new System.EventHandler(this.suggestionTable_PayToSuggestion);
+            // 
+            // hallOfFame
+            // 
+            this.hallOfFame.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.hallOfFame, "hallOfFame");
+            this.hallOfFame.CurrentLevel = GAME.Levels.L1;
+            this.hallOfFame.Name = "hallOfFame";
+            this.hallOfFame.NextLevel += new System.EventHandler(this.hallOfFame_NextLevel);
+            this.hallOfFame.PlayAgain += new System.EventHandler(this.hallOfFame_PlayAgain);
+            this.hallOfFame.LevelMenuOpen += new System.EventHandler(this.hallOfFame_LevelMenuOpen);
+            // 
+            // continueSelection
+            // 
+            this.continueSelection.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.continueSelection, "continueSelection");
+            this.continueSelection.Name = "continueSelection";
+            this.continueSelection.PlayAgain += new System.EventHandler(this.continueSelection_PlayAgain);
+            this.continueSelection.LevelMenuOpen += new System.EventHandler(this.continueSelection_LevelMenuOpen);
+            // 
             // RootForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
-            this.Controls.Add(this.label_Notification);
-            this.Controls.Add(this.suggestionTable);
-            this.Controls.Add(this.btn_Suggestion);
             this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.continueSelection);
-            this.Controls.Add(this.heartBar);
-            this.Controls.Add(this.hallOfFame);
             this.Controls.Add(this.mainMenu);
-            this.Controls.Add(this.toolBar);
+            this.Controls.Add(this.panel_Ticket);
+            this.Controls.Add(this.heartBar);
+            this.Controls.Add(this.label_Notification);
             this.Controls.Add(this.levelsMenu);
+            this.Controls.Add(this.btn_Suggestion);
+            this.Controls.Add(this.toolBar);
+            this.Controls.Add(this.suggestionTable);
+            this.Controls.Add(this.hallOfFame);
+            this.Controls.Add(this.continueSelection);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -423,7 +443,10 @@
             this.toolBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.menuPanel.ResumeLayout(false);
+            this.panel_Ticket.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Suggestion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,25 +459,28 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_HowToPlay;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Sound;
         private System.Windows.Forms.Panel toolBar;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private FontAwesome.Sharp.IconButton btn_Minimize;
         private FontAwesome.Sharp.IconButton btn_Size;
         private FontAwesome.Sharp.IconButton btn_Close;
-        private MainMenu mainMenu;
         private System.Windows.Forms.Timer menuTimer;
-        private LevelsMenu levelsMenu;
         private Bunifu.Framework.UI.BunifuImageButton btn_Menu;
-        private HallOfFame hallOfFame;
         private HeartBar heartBar;
-        private ContinueSelection continueSelection;
         private System.Windows.Forms.Panel menuPanel;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuImageButton btn_Suggestion;
-        private SuggestionTable suggestionTable;
         private System.Windows.Forms.Label label_Notification;
         private System.Windows.Forms.Timer notificationTimer;
         private Bunifu.Framework.UI.BunifuFlatButton btn_CoinLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Panel panel_Ticket;
+        private System.Windows.Forms.Timer ticketTimer;
+        private System.Windows.Forms.Label label1;
+        private MainMenu mainMenu;
+        private LevelsMenu levelsMenu;
+        private SuggestionTable suggestionTable;
+        private HallOfFame hallOfFame;
+        private ContinueSelection continueSelection;
     }
 }
 

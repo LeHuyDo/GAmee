@@ -34,6 +34,7 @@
             this.btn_LevelMenuOpen = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_PlayAgain = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label_Answer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_NextLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_LevelMenuOpen)).BeginInit();
@@ -67,9 +68,9 @@
             // btn_NextLevel
             // 
             this.btn_NextLevel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_NextLevel.Image = global::GAME.Properties.Resources.nextLevel;
+            this.btn_NextLevel.Image = global::GAME.Properties.Resources.next;
             this.btn_NextLevel.ImageActive = null;
-            this.btn_NextLevel.Location = new System.Drawing.Point(342, 370);
+            this.btn_NextLevel.Location = new System.Drawing.Point(341, 431);
             this.btn_NextLevel.Name = "btn_NextLevel";
             this.btn_NextLevel.Size = new System.Drawing.Size(71, 71);
             this.btn_NextLevel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -81,9 +82,9 @@
             // btn_LevelMenuOpen
             // 
             this.btn_LevelMenuOpen.BackColor = System.Drawing.Color.Transparent;
-            this.btn_LevelMenuOpen.Image = global::GAME.Properties.Resources.menuIcon;
+            this.btn_LevelMenuOpen.Image = global::GAME.Properties.Resources.menu;
             this.btn_LevelMenuOpen.ImageActive = null;
-            this.btn_LevelMenuOpen.Location = new System.Drawing.Point(214, 370);
+            this.btn_LevelMenuOpen.Location = new System.Drawing.Point(203, 431);
             this.btn_LevelMenuOpen.Name = "btn_LevelMenuOpen";
             this.btn_LevelMenuOpen.Size = new System.Drawing.Size(71, 71);
             this.btn_LevelMenuOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,9 +96,9 @@
             // btn_PlayAgain
             // 
             this.btn_PlayAgain.BackColor = System.Drawing.Color.Transparent;
-            this.btn_PlayAgain.Image = global::GAME.Properties.Resources.playAgain;
+            this.btn_PlayAgain.Image = global::GAME.Properties.Resources.playAgain1;
             this.btn_PlayAgain.ImageActive = null;
-            this.btn_PlayAgain.Location = new System.Drawing.Point(78, 370);
+            this.btn_PlayAgain.Location = new System.Drawing.Point(65, 431);
             this.btn_PlayAgain.Name = "btn_PlayAgain";
             this.btn_PlayAgain.Size = new System.Drawing.Size(71, 71);
             this.btn_PlayAgain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,27 +111,40 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LawnGreen;
-            this.label1.Location = new System.Drawing.Point(73, 183);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label1.Location = new System.Drawing.Point(37, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 29);
+            this.label1.Size = new System.Drawing.Size(150, 36);
             this.label1.TabIndex = 4;
             this.label1.Text = "Giải thích";
+            // 
+            // label_Answer
+            // 
+            this.label_Answer.BackColor = System.Drawing.Color.Transparent;
+            this.label_Answer.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Answer.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label_Answer.Location = new System.Drawing.Point(59, 196);
+            this.label_Answer.Name = "label_Answer";
+            this.label_Answer.Size = new System.Drawing.Size(387, 189);
+            this.label_Answer.TabIndex = 5;
+            this.label_Answer.Text = "Viết vào đây: ";
             // 
             // HallOfFame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.BackgroundImage = global::GAME.Properties.Resources.Blue_Green_Circle_Gradient_Android_Wallpaper_360x640;
+            this.BackgroundImage = global::GAME.Properties.Resources.b4869abd6b3fb22cba3635dab74b6c87_700x394;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label_Answer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.levelLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_NextLevel);
             this.Controls.Add(this.btn_LevelMenuOpen);
             this.Controls.Add(this.btn_PlayAgain);
+            this.DoubleBuffered = true;
             this.Name = "HallOfFame";
             this.Size = new System.Drawing.Size(497, 571);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -150,5 +164,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label levelLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Answer;
     }
 }

@@ -13,8 +13,15 @@ namespace GAME
     public partial class PrefabLevel : UserControl
     {
         protected string suggestionText = "";
+        protected string answerText = "";
+
+        protected bool isBuySuggestion = false;
 
         public string SuggestionText { get => suggestionText; set => suggestionText = value; }
+
+        public string AnwserText { get => answerText; set => answerText = value; }
+
+        public bool IsBuySuggestion { get => isBuySuggestion; set => isBuySuggestion = value; }
 
         public PrefabLevel()
         {

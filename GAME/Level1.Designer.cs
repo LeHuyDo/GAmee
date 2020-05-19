@@ -44,7 +44,7 @@
             this.btn_QuaTao.BackColor = System.Drawing.Color.Transparent;
             this.btn_QuaTao.Image = global::GAME.Properties.Resources.object_5;
             this.btn_QuaTao.ImageActive = null;
-            this.btn_QuaTao.Location = new System.Drawing.Point(541, 641);
+            this.btn_QuaTao.Location = new System.Drawing.Point(520, 650);
             this.btn_QuaTao.Name = "btn_QuaTao";
             this.btn_QuaTao.Size = new System.Drawing.Size(88, 107);
             this.btn_QuaTao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -58,7 +58,7 @@
             this.btn_CaRot.BackColor = System.Drawing.Color.Transparent;
             this.btn_CaRot.Image = global::GAME.Properties.Resources.object_4;
             this.btn_CaRot.ImageActive = null;
-            this.btn_CaRot.Location = new System.Drawing.Point(304, 641);
+            this.btn_CaRot.Location = new System.Drawing.Point(293, 641);
             this.btn_CaRot.Name = "btn_CaRot";
             this.btn_CaRot.Size = new System.Drawing.Size(102, 116);
             this.btn_CaRot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -72,7 +72,7 @@
             this.btn_QuaDua.BackColor = System.Drawing.Color.Transparent;
             this.btn_QuaDua.Image = global::GAME.Properties.Resources.object_3;
             this.btn_QuaDua.ImageActive = null;
-            this.btn_QuaDua.Location = new System.Drawing.Point(76, 650);
+            this.btn_QuaDua.Location = new System.Drawing.Point(94, 650);
             this.btn_QuaDua.Name = "btn_QuaDua";
             this.btn_QuaDua.Size = new System.Drawing.Size(74, 107);
             this.btn_QuaDua.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,9 +86,9 @@
             this.label_Level1.BackColor = System.Drawing.Color.Transparent;
             this.label_Level1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Level1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label_Level1.Location = new System.Drawing.Point(92, 144);
+            this.label_Level1.Location = new System.Drawing.Point(68, 133);
             this.label_Level1.Name = "label_Level1";
-            this.label_Level1.Size = new System.Drawing.Size(537, 93);
+            this.label_Level1.Size = new System.Drawing.Size(561, 114);
             this.label_Level1.TabIndex = 1;
             this.label_Level1.Text = "Cho tất cả hoa quả vào trong xô";
             this.label_Level1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

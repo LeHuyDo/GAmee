@@ -20,6 +20,7 @@ namespace GAME
         private void Level1_Load(object sender, EventArgs e)
         {
             suggestionText = "Chú ý là hoa quả nhé :3";
+            answerText = "Tất nhiên cà rốt không thể là hoa quả rồi !";
 
             ControlExtension.Draggable(btn_QuaDua, true);
             ControlExtension.Draggable(btn_CaRot, true);
