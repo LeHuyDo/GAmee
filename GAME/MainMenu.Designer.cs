@@ -35,6 +35,7 @@
             this.btn_Choitiep = new System.Windows.Forms.Button();
             this.btn_CachChoi = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -105,6 +106,18 @@
             this.btn_Thoat.UseVisualStyleBackColor = false;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_ThoatTroChoi_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(93, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(549, 90);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "GAME LÀ DỄ";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -112,6 +125,7 @@
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImage = global::GAME.Properties.Resources.Background_Cutted;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_CachChoi);
             this.Controls.Add(this.btn_Choitiep);
@@ -121,6 +135,7 @@
             this.Size = new System.Drawing.Size(702, 880);
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -131,5 +146,6 @@
         private System.Windows.Forms.Button btn_Choitiep;
         private System.Windows.Forms.Button btn_CachChoi;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Label label1;
     }
 }

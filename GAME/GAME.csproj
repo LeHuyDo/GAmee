@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>G:\BUNIFU_DEMO\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
@@ -1368,6 +1371,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cake2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sfx_2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sfx_1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

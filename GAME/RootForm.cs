@@ -30,7 +30,7 @@ namespace GAME
 
         ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
 
-        SoundPlayer backgroundMusic = new SoundPlayer();
+        SoundPlayer backgroundMusic = new SoundPlayer(Properties.Resources.sfx_1);
         private bool isPlayingBackgroundMusic = false;
 
         public RootForm()
@@ -191,7 +191,6 @@ namespace GAME
             ToolbarOpen();
             LevelsMenu_Open();
 
-            //  ContinueSelection vẫn hiện
             try
             {
                 if (currentLevel != null)
@@ -207,7 +206,7 @@ namespace GAME
 
         private void SetMusic_MainMenu()
         {
-            backgroundMusic.SoundLocation = "sfx_1.wav";
+            backgroundMusic = new SoundPlayer(Properties.Resources.sfx_1);
             backgroundMusic.PlayLooping();
         }
         #endregion
@@ -350,7 +349,7 @@ namespace GAME
 
         private void SetMusic_InGame()
         {
-            backgroundMusic.SoundLocation = "sfx_2.wav";
+            SoundPlayer backgroundMusic = new SoundPlayer(Properties.Resources.sfx_2);
             backgroundMusic.PlayLooping();
         }
         #endregion
