@@ -52,15 +52,16 @@
             this.label_Level1.TabIndex = 4;
             this.label_Level1.Text = "La bàn đang chỉ hướng:";
             this.label_Level1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Level1.Click += new System.EventHandler(this.WrongAnserHandle);
             // 
             // btn_West
             // 
             this.btn_West.BackColor = System.Drawing.Color.Transparent;
             this.btn_West.Image = global::GAME.Properties.Resources.bWest;
             this.btn_West.ImageActive = null;
-            this.btn_West.Location = new System.Drawing.Point(402, 641);
+            this.btn_West.Location = new System.Drawing.Point(402, 656);
             this.btn_West.Name = "btn_West";
-            this.btn_West.Size = new System.Drawing.Size(224, 81);
+            this.btn_West.Size = new System.Drawing.Size(194, 66);
             this.btn_West.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_West.TabIndex = 5;
             this.btn_West.TabStop = false;
@@ -72,42 +73,42 @@
             this.btn_East.BackColor = System.Drawing.Color.Transparent;
             this.btn_East.Image = global::GAME.Properties.Resources.bEast;
             this.btn_East.ImageActive = null;
-            this.btn_East.Location = new System.Drawing.Point(402, 510);
+            this.btn_East.Location = new System.Drawing.Point(402, 525);
             this.btn_East.Name = "btn_East";
-            this.btn_East.Size = new System.Drawing.Size(224, 81);
+            this.btn_East.Size = new System.Drawing.Size(194, 66);
             this.btn_East.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_East.TabIndex = 5;
             this.btn_East.TabStop = false;
             this.btn_East.Zoom = 10;
-            this.btn_East.Click += new System.EventHandler(this.WrongAnserEvent);
+            this.btn_East.Click += new System.EventHandler(this.WrongAnserHandle);
             // 
             // btn_South
             // 
             this.btn_South.BackColor = System.Drawing.Color.Transparent;
             this.btn_South.Image = global::GAME.Properties.Resources.bSouth;
             this.btn_South.ImageActive = null;
-            this.btn_South.Location = new System.Drawing.Point(402, 379);
+            this.btn_South.Location = new System.Drawing.Point(402, 394);
             this.btn_South.Name = "btn_South";
-            this.btn_South.Size = new System.Drawing.Size(224, 81);
+            this.btn_South.Size = new System.Drawing.Size(194, 66);
             this.btn_South.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_South.TabIndex = 5;
             this.btn_South.TabStop = false;
             this.btn_South.Zoom = 10;
-            this.btn_South.Click += new System.EventHandler(this.WrongAnserEvent);
+            this.btn_South.Click += new System.EventHandler(this.WrongAnserHandle);
             // 
             // btn_North
             // 
             this.btn_North.BackColor = System.Drawing.Color.Transparent;
             this.btn_North.Image = global::GAME.Properties.Resources.bNorth;
             this.btn_North.ImageActive = null;
-            this.btn_North.Location = new System.Drawing.Point(402, 248);
+            this.btn_North.Location = new System.Drawing.Point(402, 263);
             this.btn_North.Name = "btn_North";
-            this.btn_North.Size = new System.Drawing.Size(224, 81);
+            this.btn_North.Size = new System.Drawing.Size(194, 66);
             this.btn_North.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_North.TabIndex = 5;
             this.btn_North.TabStop = false;
             this.btn_North.Zoom = 10;
-            this.btn_North.Click += new System.EventHandler(this.WrongAnserEvent);
+            this.btn_North.Click += new System.EventHandler(this.WrongAnserHandle);
             // 
             // pictureBox1
             // 
@@ -118,11 +119,12 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.WrongAnserHandle);
             // 
             // Level3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btn_West);
             this.Controls.Add(this.btn_East);
@@ -131,7 +133,8 @@
             this.Controls.Add(this.label_Level1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Level3";
-            this.Size = new System.Drawing.Size(702, 880);
+            this.Load += new System.EventHandler(this.Level3_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Level3_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.btn_West)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_East)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_South)).EndInit();

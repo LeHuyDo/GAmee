@@ -10,24 +10,28 @@ using System.Windows.Forms;
 
 namespace GAME
 {
-    public partial class Level4 : UserControl
+    public partial class Level4 : PrefabLevel
     {
         public Level4()
         {
             InitializeComponent();
         }
 
-        #region Thêm một số HandleEvent
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Passed")]
-        public event EventHandler Passed;
+        private void Level4_Load(object sender, EventArgs e)
+        {
+            suggestionText = "Tầng mà mọi người phải xuất hiện nhiều nhất ấy";
+            answerText = "Muốn đi thang máy lên chắc chắn phải qua tầng 1 (không tính tầng hầm nha :v)";
+        }
 
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Missed")]
-        public event EventHandler Missed;
+        private void RightAnswerHandle(object sender, EventArgs e)
+        {
+            RightAnswer(EventArgs.Empty);
+        }
 
-        #endregion
+        private void WrongAnswerHandle(object sender, EventArgs e)
+        {
+            WrongAnswer(EventArgs.Empty);
+        }
+
     }
 }

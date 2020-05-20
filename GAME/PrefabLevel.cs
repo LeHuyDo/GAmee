@@ -12,26 +12,44 @@ namespace GAME
 {
     public partial class PrefabLevel : UserControl
     {
+        protected string suggestionText = "";
+        protected string answerText = "";
+
+        protected bool isBuySuggestion = false;
+
+        public string SuggestionText { get => suggestionText; set => suggestionText = value; }
+
+        public string AnwserText { get => answerText; set => answerText = value; }
+
+        public bool IsBuySuggestion { get => isBuySuggestion; set => isBuySuggestion = value; }
+
         public PrefabLevel()
         {
             InitializeComponent();
         }
 
-        private void PrefabLevel_Load(object sender, EventArgs e)
+        protected virtual void RightAnswer(EventArgs e)
         {
-            Passed(this, e);
+            EventHandler right = rightAnswer;
+            right?.Invoke(this, e);
+        }
+
+        protected virtual void WrongAnswer(EventArgs e)
+        {
+            EventHandler wrong = wrongAnswer;
+            wrong?.Invoke(this, e);
         }
 
         #region Thêm một số HandleEvent
         [Browsable(true)]
         [Category("CustomAction")]
         [Description("Passed")]
-        public event EventHandler Passed;
+        public event EventHandler rightAnswer;
 
         [Browsable(true)]
         [Category("CustomAction")]
         [Description("Missed")]
-        public event EventHandler Missed;
+        public event EventHandler wrongAnswer;
 
         #endregion
     }

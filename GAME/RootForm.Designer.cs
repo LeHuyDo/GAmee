@@ -31,38 +31,84 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RootForm));
             this.toolBar = new System.Windows.Forms.Panel();
+            this.btn_CoinLabel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Menu = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_Minimize = new FontAwesome.Sharp.IconButton();
             this.btn_Size = new FontAwesome.Sharp.IconButton();
             this.btn_Close = new FontAwesome.Sharp.IconButton();
             this.menuTimer = new System.Windows.Forms.Timer(this.components);
-            this.menuPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.menuLabel = new System.Windows.Forms.Label();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.hallOfFame = new GAME.HallOfFame();
+            this.menuPanel = new System.Windows.Forms.Panel();
+            this.btn_Information = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_LevelMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_HowToPlay = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Sound = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.label_Notification = new System.Windows.Forms.Label();
+            this.notificationTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel_Ticket = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.ticketTimer = new System.Windows.Forms.Timer(this.components);
+            this.btn_Suggestion = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.informationTable = new GAME.Information();
+            this.howToPlayTable = new GAME.HowToPlay();
             this.mainMenu = new GAME.MainMenu();
+            this.heartBar = new GAME.HeartBar();
             this.levelsMenu = new GAME.LevelsMenu();
+            this.suggestionTable = new GAME.SuggestionTable();
+            this.hallOfFame = new GAME.HallOfFame();
+            this.continueSelection = new GAME.ContinueSelection();
             this.toolBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).BeginInit();
             this.menuPanel.SuspendLayout();
+            this.panel_Ticket.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Suggestion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolBar
             // 
             this.toolBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(52)))), ((int)(((byte)(71)))));
+            this.toolBar.Controls.Add(this.btn_CoinLabel);
             this.toolBar.Controls.Add(this.btn_Menu);
-            this.toolBar.Controls.Add(this.bunifuGradientPanel2);
-            this.toolBar.Controls.Add(this.bunifuGradientPanel1);
             this.toolBar.Controls.Add(this.btn_Minimize);
             this.toolBar.Controls.Add(this.btn_Size);
             this.toolBar.Controls.Add(this.btn_Close);
             resources.ApplyResources(this.toolBar, "toolBar");
             this.toolBar.Name = "toolBar";
+            // 
+            // btn_CoinLabel
+            // 
+            this.btn_CoinLabel.Activecolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btn_CoinLabel, "btn_CoinLabel");
+            this.btn_CoinLabel.BorderRadius = 0;
+            this.btn_CoinLabel.ButtonText = "15";
+            this.btn_CoinLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btn_CoinLabel.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_CoinLabel.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.Iconimage = global::GAME.Properties.Resources.coin;
+            this.btn_CoinLabel.Iconimage_right = null;
+            this.btn_CoinLabel.Iconimage_right_Selected = null;
+            this.btn_CoinLabel.Iconimage_Selected = null;
+            this.btn_CoinLabel.IconMarginLeft = 0;
+            this.btn_CoinLabel.IconMarginRight = 0;
+            this.btn_CoinLabel.IconRightVisible = true;
+            this.btn_CoinLabel.IconRightZoom = 0D;
+            this.btn_CoinLabel.IconVisible = true;
+            this.btn_CoinLabel.IconZoom = 95D;
+            this.btn_CoinLabel.IsTab = false;
+            this.btn_CoinLabel.Name = "btn_CoinLabel";
+            this.btn_CoinLabel.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btn_CoinLabel.OnHoverTextColor = System.Drawing.Color.Chartreuse;
+            this.btn_CoinLabel.selected = false;
+            this.btn_CoinLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_CoinLabel.Textcolor = System.Drawing.Color.Yellow;
+            this.btn_CoinLabel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Menu
             // 
@@ -74,26 +120,6 @@
             this.btn_Menu.TabStop = false;
             this.btn_Menu.Zoom = 10;
             this.btn_Menu.Click += new System.EventHandler(this.btn_Menu_Click);
-            // 
-            // bunifuGradientPanel2
-            // 
-            resources.ApplyResources(this.bunifuGradientPanel2, "bunifuGradientPanel2");
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            // 
-            // bunifuGradientPanel1
-            // 
-            resources.ApplyResources(this.bunifuGradientPanel1, "bunifuGradientPanel1");
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
             // 
             // btn_Minimize
             // 
@@ -141,159 +167,222 @@
             // 
             // menuTimer
             // 
-            this.menuTimer.Interval = 16;
+            this.menuTimer.Interval = 25;
             this.menuTimer.Tick += new System.EventHandler(this.menuTimer_Tick);
-            // 
-            // menuPanel
-            // 
-            resources.ApplyResources(this.menuPanel, "menuPanel");
-            this.menuPanel.Controls.Add(this.menuLabel);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton4);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton1);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton3);
-            this.menuPanel.Controls.Add(this.bunifuFlatButton2);
-            this.menuPanel.GradientBottomLeft = System.Drawing.Color.Cyan;
-            this.menuPanel.GradientBottomRight = System.Drawing.Color.Chartreuse;
-            this.menuPanel.GradientTopLeft = System.Drawing.Color.DarkGreen;
-            this.menuPanel.GradientTopRight = System.Drawing.Color.Purple;
-            this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Quality = 1;
             // 
             // menuLabel
             // 
             resources.ApplyResources(this.menuLabel, "menuLabel");
             this.menuLabel.BackColor = System.Drawing.Color.Transparent;
+            this.menuLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.menuLabel.Name = "menuLabel";
             // 
-            // bunifuFlatButton4
+            // menuPanel
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton4, "bunifuFlatButton4");
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 90D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.menuPanel.Controls.Add(this.menuLabel);
+            this.menuPanel.Controls.Add(this.btn_Information);
+            this.menuPanel.Controls.Add(this.btn_LevelMenu);
+            this.menuPanel.Controls.Add(this.btn_HowToPlay);
+            this.menuPanel.Controls.Add(this.btn_Sound);
+            resources.ApplyResources(this.menuPanel, "menuPanel");
+            this.menuPanel.Name = "menuPanel";
             // 
-            // bunifuFlatButton1
+            // btn_Information
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton1, "bunifuFlatButton1");
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Information.Activecolor = System.Drawing.Color.OliveDrab;
+            resources.ApplyResources(this.btn_Information, "btn_Information");
+            this.btn_Information.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_Information.BorderRadius = 0;
+            this.btn_Information.ButtonText = "Thông tin trò chơi";
+            this.btn_Information.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Information.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Information.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Information.Iconimage = global::GAME.Properties.Resources.info;
+            this.btn_Information.Iconimage_right = null;
+            this.btn_Information.Iconimage_right_Selected = null;
+            this.btn_Information.Iconimage_Selected = null;
+            this.btn_Information.IconMarginLeft = 0;
+            this.btn_Information.IconMarginRight = 0;
+            this.btn_Information.IconRightVisible = true;
+            this.btn_Information.IconRightZoom = 0D;
+            this.btn_Information.IconVisible = true;
+            this.btn_Information.IconZoom = 70D;
+            this.btn_Information.IsTab = false;
+            this.btn_Information.Name = "btn_Information";
+            this.btn_Information.Normalcolor = System.Drawing.Color.OliveDrab;
+            this.btn_Information.OnHovercolor = System.Drawing.Color.YellowGreen;
+            this.btn_Information.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Information.selected = false;
+            this.btn_Information.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Information.Textcolor = System.Drawing.Color.White;
+            this.btn_Information.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Information.Click += new System.EventHandler(this.btn_Information_Click);
             // 
-            // bunifuFlatButton3
+            // btn_LevelMenu
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton3, "bunifuFlatButton3");
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 90D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LevelMenu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(83)))), ((int)(((byte)(104)))));
+            resources.ApplyResources(this.btn_LevelMenu, "btn_LevelMenu");
+            this.btn_LevelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(120)))), ((int)(((byte)(134)))));
+            this.btn_LevelMenu.BorderRadius = 0;
+            this.btn_LevelMenu.ButtonText = "Màn chơi";
+            this.btn_LevelMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_LevelMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_LevelMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_LevelMenu.Iconimage = global::GAME.Properties.Resources.menu1;
+            this.btn_LevelMenu.Iconimage_right = null;
+            this.btn_LevelMenu.Iconimage_right_Selected = null;
+            this.btn_LevelMenu.Iconimage_Selected = null;
+            this.btn_LevelMenu.IconMarginLeft = 0;
+            this.btn_LevelMenu.IconMarginRight = 0;
+            this.btn_LevelMenu.IconRightVisible = true;
+            this.btn_LevelMenu.IconRightZoom = 0D;
+            this.btn_LevelMenu.IconVisible = true;
+            this.btn_LevelMenu.IconZoom = 70D;
+            this.btn_LevelMenu.IsTab = false;
+            this.btn_LevelMenu.Name = "btn_LevelMenu";
+            this.btn_LevelMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(120)))), ((int)(((byte)(134)))));
+            this.btn_LevelMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.btn_LevelMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_LevelMenu.selected = false;
+            this.btn_LevelMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LevelMenu.Textcolor = System.Drawing.Color.Gainsboro;
+            this.btn_LevelMenu.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LevelMenu.Click += new System.EventHandler(this.btn_LevelMenu_Click);
             // 
-            // bunifuFlatButton2
+            // btn_HowToPlay
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            resources.ApplyResources(this.bunifuFlatButton2, "bunifuFlatButton2");
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HowToPlay.Activecolor = System.Drawing.Color.LightSteelBlue;
+            resources.ApplyResources(this.btn_HowToPlay, "btn_HowToPlay");
+            this.btn_HowToPlay.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_HowToPlay.BorderRadius = 0;
+            this.btn_HowToPlay.ButtonText = "Hướng dẫn";
+            this.btn_HowToPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_HowToPlay.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_HowToPlay.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_HowToPlay.Iconimage = global::GAME.Properties.Resources.questionMark;
+            this.btn_HowToPlay.Iconimage_right = null;
+            this.btn_HowToPlay.Iconimage_right_Selected = null;
+            this.btn_HowToPlay.Iconimage_Selected = null;
+            this.btn_HowToPlay.IconMarginLeft = 0;
+            this.btn_HowToPlay.IconMarginRight = 0;
+            this.btn_HowToPlay.IconRightVisible = true;
+            this.btn_HowToPlay.IconRightZoom = 0D;
+            this.btn_HowToPlay.IconVisible = true;
+            this.btn_HowToPlay.IconZoom = 70D;
+            this.btn_HowToPlay.IsTab = false;
+            this.btn_HowToPlay.Name = "btn_HowToPlay";
+            this.btn_HowToPlay.Normalcolor = System.Drawing.Color.LightSteelBlue;
+            this.btn_HowToPlay.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_HowToPlay.OnHoverTextColor = System.Drawing.Color.SteelBlue;
+            this.btn_HowToPlay.selected = false;
+            this.btn_HowToPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_HowToPlay.Textcolor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_HowToPlay.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HowToPlay.Click += new System.EventHandler(this.btn_HowToPlay_Click);
             // 
-            // hallOfFame
+            // btn_Sound
             // 
-            this.hallOfFame.BackColor = System.Drawing.Color.DimGray;
-            this.hallOfFame.CurrentLevel = 1;
-            resources.ApplyResources(this.hallOfFame, "hallOfFame");
-            this.hallOfFame.Name = "hallOfFame";
-            this.hallOfFame.NextLevel += new System.EventHandler(this.hallOfFame_NextLevel);
-            this.hallOfFame.PlayAgain += new System.EventHandler(this.hallOfFame_PlayAgain);
-            this.hallOfFame.LevelMenuOpen += new System.EventHandler(this.hallOfFame_LevelMenuOpen);
+            this.btn_Sound.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(151)))), ((int)(((byte)(85)))));
+            resources.ApplyResources(this.btn_Sound, "btn_Sound");
+            this.btn_Sound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Sound.BorderRadius = 0;
+            this.btn_Sound.ButtonText = "Âm thanh";
+            this.btn_Sound.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Sound.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Sound.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Sound.Iconimage = global::GAME.Properties.Resources.speaker;
+            this.btn_Sound.Iconimage_right = null;
+            this.btn_Sound.Iconimage_right_Selected = null;
+            this.btn_Sound.Iconimage_Selected = null;
+            this.btn_Sound.IconMarginLeft = 0;
+            this.btn_Sound.IconMarginRight = 0;
+            this.btn_Sound.IconRightVisible = true;
+            this.btn_Sound.IconRightZoom = 0D;
+            this.btn_Sound.IconVisible = true;
+            this.btn_Sound.IconZoom = 70D;
+            this.btn_Sound.IsTab = false;
+            this.btn_Sound.Name = "btn_Sound";
+            this.btn_Sound.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Sound.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_Sound.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Sound.selected = false;
+            this.btn_Sound.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Sound.Textcolor = System.Drawing.Color.Olive;
+            this.btn_Sound.TextFont = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sound.Click += new System.EventHandler(this.btn_Sound_Click);
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.toolBar;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // label_Notification
+            // 
+            resources.ApplyResources(this.label_Notification, "label_Notification");
+            this.label_Notification.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label_Notification.Name = "label_Notification";
+            // 
+            // notificationTimer
+            // 
+            this.notificationTimer.Interval = 33;
+            this.notificationTimer.Tick += new System.EventHandler(this.notificationTimer_Tick);
+            // 
+            // panel_Ticket
+            // 
+            this.panel_Ticket.Controls.Add(this.label1);
+            this.panel_Ticket.Controls.Add(this.pictureBox12);
+            resources.ApplyResources(this.panel_Ticket, "panel_Ticket");
+            this.panel_Ticket.Name = "panel_Ticket";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Name = "label1";
+            // 
+            // pictureBox12
+            // 
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.Image = global::GAME.Properties.Resources.ticket11;
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureTicket_Click);
+            // 
+            // ticketTimer
+            // 
+            this.ticketTimer.Interval = 33;
+            this.ticketTimer.Tick += new System.EventHandler(this.ticketTimer_Tick);
+            // 
+            // btn_Suggestion
+            // 
+            this.btn_Suggestion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Suggestion.Image = global::GAME.Properties.Resources.glass;
+            this.btn_Suggestion.ImageActive = null;
+            resources.ApplyResources(this.btn_Suggestion, "btn_Suggestion");
+            this.btn_Suggestion.Name = "btn_Suggestion";
+            this.btn_Suggestion.TabStop = false;
+            this.btn_Suggestion.Zoom = 6;
+            this.btn_Suggestion.Click += new System.EventHandler(this.btn_Suggestion_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GAME.Properties.Resources.ticket11;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // informationTable
+            // 
+            resources.ApplyResources(this.informationTable, "informationTable");
+            this.informationTable.Name = "informationTable";
+            // 
+            // howToPlayTable
+            // 
+            resources.ApplyResources(this.howToPlayTable, "howToPlayTable");
+            this.howToPlayTable.Name = "howToPlayTable";
             // 
             // mainMenu
             // 
@@ -304,25 +393,64 @@
             this.mainMenu.ChoitiepButtonClick += new System.EventHandler(this.mainMenu_ChoitiepButtonClick);
             this.mainMenu.CachchoiButtonClick += new System.EventHandler(this.mainMenu_CachchoiButtonClick);
             // 
+            // heartBar
+            // 
+            this.heartBar.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.heartBar, "heartBar");
+            this.heartBar.Name = "heartBar";
+            // 
             // levelsMenu
             // 
             this.levelsMenu.BackColor = System.Drawing.Color.Transparent;
+            this.levelsMenu.LevelsStatus = null;
             resources.ApplyResources(this.levelsMenu, "levelsMenu");
             this.levelsMenu.Name = "levelsMenu";
-            this.levelsMenu.Level1_ButtonClick += new System.EventHandler(this.levelsMenu_Level1_ButtonClick);
-            this.levelsMenu.Level2_ButtonClick += new System.EventHandler(this.levelsMenu_Level2_ButtonClick);
-            this.levelsMenu.Level3_ButtonClick += new System.EventHandler(this.levelsMenu_Level3_ButtonClick);
+            this.levelsMenu.SelectedLevel = GAME.Levels.L1;
+            this.levelsMenu.Level_ButtonClick += new System.EventHandler(this.levelsMenu_Level_ButtonClick);
+            // 
+            // suggestionTable
+            // 
+            this.suggestionTable.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.suggestionTable, "suggestionTable");
+            this.suggestionTable.Name = "suggestionTable";
+            this.suggestionTable.PayToSuggestion += new System.EventHandler(this.suggestionTable_PayToSuggestion);
+            // 
+            // hallOfFame
+            // 
+            this.hallOfFame.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.hallOfFame, "hallOfFame");
+            this.hallOfFame.CurrentLevel = GAME.Levels.L1;
+            this.hallOfFame.Name = "hallOfFame";
+            this.hallOfFame.NextLevel += new System.EventHandler(this.hallOfFame_NextLevel);
+            this.hallOfFame.PlayAgain += new System.EventHandler(this.hallOfFame_PlayAgain);
+            this.hallOfFame.LevelMenuOpen += new System.EventHandler(this.hallOfFame_LevelMenuOpen);
+            // 
+            // continueSelection
+            // 
+            this.continueSelection.BackColor = System.Drawing.Color.DimGray;
+            resources.ApplyResources(this.continueSelection, "continueSelection");
+            this.continueSelection.Name = "continueSelection";
+            this.continueSelection.PlayAgain += new System.EventHandler(this.continueSelection_PlayAgain);
+            this.continueSelection.LevelMenuOpen += new System.EventHandler(this.continueSelection_LevelMenuOpen);
             // 
             // RootForm
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
-            this.Controls.Add(this.hallOfFame);
-            this.Controls.Add(this.mainMenu);
+            this.Controls.Add(this.informationTable);
+            this.Controls.Add(this.howToPlayTable);
             this.Controls.Add(this.menuPanel);
-            this.Controls.Add(this.toolBar);
+            this.Controls.Add(this.mainMenu);
+            this.Controls.Add(this.panel_Ticket);
+            this.Controls.Add(this.heartBar);
+            this.Controls.Add(this.label_Notification);
             this.Controls.Add(this.levelsMenu);
+            this.Controls.Add(this.btn_Suggestion);
+            this.Controls.Add(this.toolBar);
+            this.Controls.Add(this.suggestionTable);
+            this.Controls.Add(this.hallOfFame);
+            this.Controls.Add(this.continueSelection);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -332,28 +460,46 @@
             this.toolBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Menu)).EndInit();
             this.menuPanel.ResumeLayout(false);
+            this.panel_Ticket.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Suggestion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuGradientPanel menuPanel;
         private System.Windows.Forms.Label menuLabel;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Information;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_LevelMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_HowToPlay;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Sound;
         private System.Windows.Forms.Panel toolBar;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private FontAwesome.Sharp.IconButton btn_Minimize;
         private FontAwesome.Sharp.IconButton btn_Size;
         private FontAwesome.Sharp.IconButton btn_Close;
-        private MainMenu mainMenu;
         private System.Windows.Forms.Timer menuTimer;
-        private LevelsMenu levelsMenu;
         private Bunifu.Framework.UI.BunifuImageButton btn_Menu;
+        private HeartBar heartBar;
+        private System.Windows.Forms.Panel menuPanel;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuImageButton btn_Suggestion;
+        private System.Windows.Forms.Label label_Notification;
+        private System.Windows.Forms.Timer notificationTimer;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_CoinLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Panel panel_Ticket;
+        private System.Windows.Forms.Timer ticketTimer;
+        private System.Windows.Forms.Label label1;
+        private MainMenu mainMenu;
+        private LevelsMenu levelsMenu;
+        private SuggestionTable suggestionTable;
         private HallOfFame hallOfFame;
+        private ContinueSelection continueSelection;
+        private HowToPlay howToPlayTable;
+        private Information informationTable;
     }
 }
 

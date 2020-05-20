@@ -31,7 +31,7 @@
             this.picture_YellowPencil = new System.Windows.Forms.PictureBox();
             this.picture_RedPencil = new System.Windows.Forms.PictureBox();
             this.picture_BluePencil = new System.Windows.Forms.PictureBox();
-            this.label_Level1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label_Level2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picture_YellowPencil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_RedPencil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_BluePencil)).BeginInit();
@@ -73,30 +73,30 @@
             this.picture_BluePencil.TabStop = false;
             this.picture_BluePencil.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picture_BluePencil_MouseUp);
             // 
-            // label_Level1
+            // label_Level2
             // 
-            this.label_Level1.BackColor = System.Drawing.Color.Transparent;
-            this.label_Level1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Level1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label_Level1.Location = new System.Drawing.Point(89, 118);
-            this.label_Level1.Name = "label_Level1";
-            this.label_Level1.Size = new System.Drawing.Size(537, 93);
-            this.label_Level1.TabIndex = 3;
-            this.label_Level1.Text = "Chọn chiếc bút chì xanh lục";
-            this.label_Level1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Level2.BackColor = System.Drawing.Color.Transparent;
+            this.label_Level2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Level2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label_Level2.Location = new System.Drawing.Point(89, 118);
+            this.label_Level2.Name = "label_Level2";
+            this.label_Level2.Size = new System.Drawing.Size(537, 93);
+            this.label_Level2.TabIndex = 3;
+            this.label_Level2.Text = "Chọn chiếc bút chì xanh lục";
+            this.label_Level2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Level2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.label_Level1);
+            this.Controls.Add(this.label_Level2);
             this.Controls.Add(this.picture_YellowPencil);
             this.Controls.Add(this.picture_RedPencil);
             this.Controls.Add(this.picture_BluePencil);
             this.Name = "Level2";
-            this.Size = new System.Drawing.Size(702, 880);
             this.Load += new System.EventHandler(this.Level2_Load);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Level2_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.picture_YellowPencil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_RedPencil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_BluePencil)).EndInit();
@@ -108,6 +108,6 @@
         private System.Windows.Forms.PictureBox picture_BluePencil;
         private System.Windows.Forms.PictureBox picture_RedPencil;
         private System.Windows.Forms.PictureBox picture_YellowPencil;
-        private Bunifu.Framework.UI.BunifuCustomLabel label_Level1;
+        private Bunifu.Framework.UI.BunifuCustomLabel label_Level2;
     }
 }

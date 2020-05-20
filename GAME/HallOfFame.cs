@@ -12,19 +12,24 @@ namespace GAME
 {
     public partial class HallOfFame : UserControl
     {
-        private int currentLevel = 1;
+        private Levels currentLevel = Levels.L1;
 
-        public int CurrentLevel { get => currentLevel; set => currentLevel = value; }
+        public Levels CurrentLevel { get => currentLevel; set => currentLevel = value; }
 
         public HallOfFame()
         {
             InitializeComponent();
         }
 
-        public void SetLevelLabel(int level)
+        public void SetLevelLabel(Levels level)
         {
             currentLevel = level;
             levelLabel.Text = "Màn " + currentLevel.ToString();
+        }
+
+        public void SetAnswerText(string text)
+        {
+            label_Answer.Text = text;
         }
 
         #region Thêm một số HandleEvent
@@ -35,7 +40,7 @@ namespace GAME
 
         private void btn_NextLevel_Click(object sender, EventArgs e)
         {
-            PlayAgain?.Invoke(sender, e);
+            NextLevel?.Invoke(sender, e);
         }
 
         [Browsable(true)]
@@ -43,9 +48,9 @@ namespace GAME
         [Description("PlayAgain")]
         public event EventHandler PlayAgain;
 
-        private void btn_LevelMenuOpen_Click(object sender, EventArgs e)
+        private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            LevelMenuOpen?.Invoke(sender, e);
+            PlayAgain?.Invoke(sender, e);
         }
 
         [Browsable(true)]
@@ -53,9 +58,9 @@ namespace GAME
         [Description("LevelMenuOpen")]
         public event EventHandler LevelMenuOpen;
 
-        private void btn_PlayAgain_Click(object sender, EventArgs e)
+        private void btn_LevelMenuOpen_Click(object sender, EventArgs e)
         {
-            NextLevel?.Invoke(sender, e);
+            LevelMenuOpen?.Invoke(sender, e);
         }
         #endregion
     }

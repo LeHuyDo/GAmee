@@ -7,42 +7,134 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.Framework.UI;
 
 namespace GAME
 {
     public partial class LevelsMenu : UserControl
     {
+        private Dictionary<Levels, bool> levelsStatus;
+
+        private Levels selectedLevel;
+
+        public Dictionary<Levels, bool> LevelsStatus { get => levelsStatus; set => levelsStatus = value; }
+
+        public Levels SelectedLevel { get => selectedLevel; set => selectedLevel = value; }
+
         public LevelsMenu()
         {
             InitializeComponent();
         }
 
+        public void SetLevelsActivation(Dictionary<Levels, bool> levelsStatus)
+        {
+            this.levelsStatus = levelsStatus;
+
+            foreach (var item in levelsStatus)
+                SetLevelButtonStatus(item.Key, item.Value);
+        }
+
+        private void SetLevelButtonStatus(Levels buttonLevel, bool isActive)
+        {
+            switch (buttonLevel)
+            {
+                case Levels.L1:
+                    btn_Level1.Enabled = isActive;
+                    btn_Level1.color = isActive? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level1.Checked = isActive;
+
+                    break;
+
+                case Levels.L2:
+                    btn_Level2.Enabled = isActive;
+                    btn_Level2.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level2.Checked = isActive;
+
+                    break;
+
+                case Levels.L3:
+                    btn_Level3.Enabled = isActive;
+                    btn_Level3.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level3.Checked = isActive;
+
+                    break;
+
+                case Levels.L4:
+                    btn_Level4.Enabled = isActive;
+                    btn_Level4.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level4.Checked = isActive;
+
+                    break;
+
+                case Levels.L5:
+                    btn_Level5.Enabled = isActive;
+                    btn_Level5.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level5.Checked = isActive;
+
+                    break;
+
+                case Levels.L6:
+                    btn_Level6.Enabled = isActive;
+                    btn_Level6.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level6.Checked = isActive;
+
+                    break;
+
+                case Levels.L7:
+                    btn_Level7.Enabled = isActive;
+                    btn_Level7.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level7.Checked = isActive;
+
+                    break;
+
+                case Levels.L8:
+                    btn_Level8.Enabled = isActive;
+                    btn_Level8.color = isActive ? Color.SeaGreen : Color.DarkSeaGreen;
+                    checkbox_Level8.Checked = isActive;
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
         #region Thêm một số HandleEvent
         [Browsable(true)]
         [Category("CustomAction")]
-        [Description("Level1 button is clicked")]
-        public event EventHandler Level1_ButtonClick;
-        private void btn_Level1_Click(object sender, EventArgs e)
-        {
-            Level1_ButtonClick?.Invoke(this, e);
-        }
+        [Description("Level button is clicked")]
+        public event EventHandler Level_ButtonClick;
 
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Level2 button is clicked")]
-        public event EventHandler Level2_ButtonClick;
-        private void btn_Level2_Click(object sender, EventArgs e)
+        private void btn_Level_Click(object sender, EventArgs e)
         {
-            Level2_ButtonClick?.Invoke(this, e);
-        }
+            BunifuTileButton button = (BunifuTileButton)sender;
 
-        [Browsable(true)]
-        [Category("CustomAction")]
-        [Description("Level1 button is clicked")]
-        public event EventHandler Level3_ButtonClick;
-        private void btn_Level3_Click(object sender, EventArgs e)
-        {
-            Level3_ButtonClick?.Invoke(this, e);
+            switch (button.Name)
+            {
+                case "btn_Level1":
+                    selectedLevel = Levels.L1;
+                    break;
+                case "btn_Level2":
+                    selectedLevel = Levels.L2;
+                    break;
+                case "btn_Level3":
+                    selectedLevel = Levels.L3;
+                    break;
+                case "btn_Level4":
+                    selectedLevel = Levels.L4;
+                    break;
+                case "btn_Level5":
+                    selectedLevel = Levels.L5;
+                    break;
+                //case "btn_Level6":
+                //    selectedLevel = Levels.L6;
+                //    break;
+
+                default:
+                    break;
+            }
+
+            Level_ButtonClick?.Invoke(this, e);
         }
         #endregion
     }
